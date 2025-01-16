@@ -1,0 +1,55 @@
+﻿
+body
+{
+    background: #222;
+}
+
+a
+{
+    color: ghostwhite;
+    text-decoration: none;
+}
+
+.navbar
+{
+    display: flex;
+    flex-direction: row;
+    background: rgba(0, 0, 0, 0.5);
+    align-content: center;
+    align-items: center;
+    padding: 0 10px 0 10px;
+}
+
+.navbar-collapse
+{
+    display: flex;
+    flex-direction: row;
+    background: red;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.nav-item
+{
+    background: #9e9e9e;
+    border-radius: 15px;
+    padding: 5px 30px 5px 30px;
+    margin: 10px;
+}
+
+.nav-link
+{
+    
+}
+
+.nav-link.active
+{
+    color: aqua;
+}
+
+
+
+.rounded
+{
+    border-radius: 15px;
+}
