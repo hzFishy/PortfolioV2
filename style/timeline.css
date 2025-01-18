@@ -127,14 +127,14 @@
 
 .main-timeline .date-outer:before
 {
-    background: #fff;
+    background: #d19f34;
     border: 2px solid #232323;
     left: -6px
 }
 
 .main-timeline .date-outer:after
 {
-    border: 2px solid #c6c6c6;
+    border: 2px solid #d5a9a9;
     left: 6px
 }
 
@@ -214,6 +214,13 @@
     text-align: right
 }
 
+.main-timeline .timeline:nth-child(2n+1) .timeline-content
+{
+    padding: 20px 0px 20px 50px;
+    text-align: left;
+    //color:green;
+}
+
 @media only screen and (max-width: 991px) {
     .main-timeline .date-content {
         margin-top: 35px
@@ -290,4 +297,42 @@
     {
         margin-bottom: 10px
     }
+}
+
+.main-timeline .timeline
+{
+    transition-duration: 0.5s;
+}
+.main-timeline .timeline .timeline-content .title
+{
+    transition-duration: 0.5s;
+}
+.main-timeline .timeline:hover .timeline-content .title
+{
+    color: red;
+    transition-duration: 0.5s;
+    transform: translateY(-5px);
+}
+
+.main-timeline .timeline:hover .date-outer:before
+{
+    background: red;
+}
+
+
+.main-timeline .timeline .more
+{
+    margin-top: 10px;
+    font-style: italic;
+    transition-duration: 0.5s;
+}
+
+.main-timeline .timeline:nth-child(2n):hover .more
+{
+    transform: translateX(-5px);
+}
+
+.main-timeline .timeline:nth-child(2n+1):hover .more
+{
+    transform: translateX(5px);
 }
