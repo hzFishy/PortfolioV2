@@ -1,55 +1,279 @@
-﻿
+﻿:root
+{
+    --hz-cyan-default: #00d6b4;
+    --hz-cyan-dark: #006fff;
+    --hz-cyan-dark-light: #448fef;
+    --hz-green-dark: #73a39b;
+    --hz-green-light: #bedad5;
+}
+
 body
 {
     background: #222;
+    color: ghostwhite;
+    text-align: center;
 }
 
 a
 {
-    color: ghostwhite;
-    text-decoration: none;
+    text-decoration: underline;
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.navbar
+a:hover
+{
+    transform: rotateX(100deg);
+    color: #21a692;
+}
+
+#main-container
+{
+    margin-top: 50px;
+    animation-duration: 0.5s;
+    animation-name: anim-intro-fade;
+    animation-delay: 0s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes anim-intro-fade
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+#header
+{
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+
+    @media (width > 1300px)
+    {
+        width: 80%;
+    }
+    @media (width <= 1300px)
+    {
+        width: 90%;
+    }
+}
+
+.hz-navbar
 {
     display: flex;
     flex-direction: row;
-    background: rgba(0, 0, 0, 0.5);
     align-content: center;
     align-items: center;
+    justify-content: space-between;
     padding: 0 10px 0 10px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    
+    height: 70px;
 }
 
-.navbar-collapse
+.hz-navbar-brand-container
 {
     display: flex;
     flex-direction: row;
-    background: red;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+    gap: 5px;
+}
+
+.hz-navbar-brand
+{
+    text-decoration: none;
+    color: var(--hz-green-dark);
+    transition-duration: 0.5s;
+}
+
+.hz-navbar-brand:hover
+{
+    color: var(--hz-cyan-default);
+    transform: translate(5px, 0px);
+    text-shadow: 0 0 7px #37a1ce;
+}
+
+#hz-navbar-brand-logo
+{
+    border-radius: 10px;
+}
+
+.hz-navbar-collapse
+{
+    display: flex;
+    flex-direction: row;
+    //background: red;
     justify-content: flex-start;
     gap: 10px;
 }
 
-.nav-item
+.hz-nav-item
 {
-    background: #9e9e9e;
+    background: #2d2d2d;
     border-radius: 15px;
     padding: 5px 30px 5px 30px;
     margin: 10px;
+    transition-duration: 0.5s;
+    box-sizing: border-box;
+
+    @media (width > 1300px)
+    {
+        display: block;
+    }
+    @media (width <= 1300px)
+    {
+        display: none;
+    }
 }
 
-.nav-link
+.hz-nav-item:hover, .hz-nav-item.hz-active
 {
-    
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #3e3e3e;
 }
 
-.nav-link.active
+.hz-nav-item .hz-nav-link
+{
+    color: var(--hz-green-dark);
+    text-decoration: none;
+}
+
+.hz-nav-item:hover .hz-nav-link
+{
+    color: var(--hz-cyan-dark-light);
+    text-shadow: 0 0 5px #3794ce;
+}
+
+.hz-nav-item.hz-active .hz-nav-link
+{
+    color: var(--hz-cyan-dark);
+    text-shadow: 0 0 5px #3794ce;
+}
+
+.hz-active
+{
+    transition-duration: 0s;
+}
+
+.hz-nav-link
+{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.hz-nav-link.hz-active
 {
     color: aqua;
 }
 
-
-
-.rounded
+.hz-rounded
 {
     border-radius: 15px;
+}
+
+.text-single-container
+{
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.text-single-container p
+{
+    font-family: "Lato", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--hz-green-light);
+    letter-spacing: 0.5px;
+}
+
+.text-single-container p a
+{
+    letter-spacing: 0.5px;
+}
+
+#name
+{
+    font-size: 21px;
+    color: #e62f32;
+    transition-duration: 0.5s;
+}
+
+#name:hover
+{
+    color: #d15a5c;
+    transform: translate(0px, 10px);
+}
+
+.hz-navbar-mobile
+{
+    margin-right: 20px;
+    @media (width > 1300px)
+    {
+        display: none;
+    }
+    @media (width <= 1300px)
+    {
+        display: block;
+    }
+    
+    position: relative;
+}
+
+#hz-navbar-mobile-list
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    transform: translate(-100%, 2%);
+    
+    text-align: right;
+
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    
+    transition-duration: 0.5s;
+}
+
+#hz-navbar-mobile-list.hz-active
+{
+    display: block;
+}
+
+#hz-navbar-mobile-list .hz-nav-item
+{
+    text-align: center;
+    display: block;
+    margin: 5px;
+}
+
+#hz-navbar-mobile-menu.hz-active
+{
+    
+}
+
+#top-header-background
+{
+    display: block;
+    background-position: 0 0, 50%;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+    padding-bottom: 0;
+    min-height: 540px;
+    width: 100%;
+    position: fixed;
 }

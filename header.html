@@ -1,24 +1,47 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-
+    
 </head>
 <body>
-    <nav class="navbar rounded">
-        <a class="navbar-brand" href="#">Navbar</a>
-        
-        <div class="navbar-collapse">
-            <div class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+    <nav id="hz-nav" class="hz-navbar hz-rounded">
+        <div class="hz-navbar-brand-container">
+            <img id="hz-navbar-brand-logo" src="/data/img/Logo32.png" alt="Logo">
+            <a class="hz-navbar-brand" href="/PortfolioV2">
+                HZFISHY<span style="color: #aaaaaa;">.FR</span>
+            </a>
+        </div>
+        <div class="hz-navbar-collapse">
+            <div id="Timeline" class="hz-nav-item">
+                <a class="hz-nav-link" href="/Timeline">TIMELINE</a>
             </div>
-            <div class="nav-item">
-                <a class="nav-link" href="./Timeline">Timeline</a>
+            <div id="Projects" class="hz-nav-item">
+                <a class="hz-nav-link" href="/Projects">Projects</a>
             </div>
-            <div class="nav-item">
-                <a class="nav-link" href="./ProjectsSkills">Projects & Skills</a>
+            <div id="Skills" class="hz-nav-item">
+                <a class="hz-nav-link" href="/Skills">Skills</a>
             </div>
-            <div class="nav-item">
-                <a class="nav-link" href="./Contact">Contact</a>
+            <div id="Contact" class="hz-nav-item">
+                <a class="hz-nav-link" href="/Contact">Contact</a>
+            </div>
+        </div>
+        <div class="hz-navbar-mobile">
+            <a href="#" onclick="OnMobileNavClick()">
+                <img id="hz-navbar-mobile-menu" src="data/icons/ggle_menu.svg" alt="Menu">
+            </a>
+            <div id="hz-navbar-mobile-list" class="">
+                <div class="hz-nav-item">
+                    <a class="hz-nav-link" href="/Timeline">TIMELINE</a>
+                </div>
+                <div class="hz-nav-item">
+                    <a class="hz-nav-link" href="/Projects">Projects</a>
+                </div>
+                <div class="hz-nav-item">
+                    <a class="hz-nav-link" href="/Skills">Skills</a>
+                </div>
+                <div class="hz-nav-item">
+                    <a class="hz-nav-link" href="/Contact">Contact</a>
+                </div>
             </div>
         </div>
     </nav>
