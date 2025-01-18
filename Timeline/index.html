@@ -123,8 +123,13 @@
             </div>
         </div>
     </div>
+    <div id="bottom"></div>
     <script>
         EndFile();
+        $(document).ready(function(){
+            var divLoc = $('#bottom').offset();
+            $('html, body').animate({scrollTop: divLoc.top}, "3000");
+        });
     </script>
 </body>
 </html>
