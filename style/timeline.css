@@ -309,22 +309,31 @@
 }
 .main-timeline .timeline:hover .timeline-content .title
 {
-    color: red;
+    color: #1fa5d6;
     transition-duration: 0.5s;
     transform: translateY(-5px);
 }
 
 .main-timeline .timeline:hover .date-outer:before
 {
-    background: red;
+    background: #1fa5d6;
 }
 
+.main-timeline .timeline .timeline-content h5
+{
+    margin-bottom: 0;
+}
 
 .main-timeline .timeline .more
 {
     margin-top: 10px;
-    font-style: italic;
+    //font-style: italic;
     transition-duration: 0.5s;
+    color: #d19f34;
+}
+.main-timeline .timeline:hover .more
+{
+    color: #00d6b4;
 }
 
 .main-timeline .timeline:nth-child(2n):hover .more

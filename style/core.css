@@ -20,18 +20,37 @@ a
     font-family: "Lato", serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 18px;
 }
 
 a:hover
 {
-    transform: rotateX(100deg);
     color: #21a692;
 }
+
+p
+{
+    font-size: 18px;
+}
+
+.link-basic
+{
+    display:inline-block;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+
+.link-basic:hover
+{
+    text-decoration: underline;
+    transform: translate(0px, -3px);
+}
+
 
 #main-container
 {
     margin-top: 50px;
-    animation-duration: 0.5s;
+    animation-duration: 1.5s;
     animation-name: anim-intro-fade;
     animation-delay: 0s;
     animation-fill-mode: backwards;
@@ -93,6 +112,7 @@ a:hover
 
 .hz-navbar-brand
 {
+    position: relative;
     text-decoration: none;
     color: var(--hz-green-dark);
     transition-duration: 0.5s;
@@ -104,6 +124,27 @@ a:hover
     transform: translate(5px, 0px);
     text-shadow: 0 0 7px #37a1ce;
 }
+
+.hz-navbar-brand p
+{
+    color: white;
+    text-align: left;
+    position: absolute;
+    opacity: 0;
+    transition-duration: 0.5s;
+    left: 0;
+    top: 17px;
+    width: 200px;
+    font-style: italic;
+    font-size: 12px;
+    text-shadow: none;
+}
+
+.hz-navbar-brand:hover p
+{
+    opacity: 1;
+}
+
 
 #hz-navbar-brand-logo
 {
@@ -204,8 +245,28 @@ a:hover
     letter-spacing: 0.5px;
 }
 
+.text-single-container-blur
+{
+    position: relative;
+    background-color: rgba(135, 135, 135, .35);
+    border: 1px solid rgba(135, 135, 135, .5);
+    box-shadow: 0 0 18px rgba(0, 0, 0, .2);
+    border-radius: 15px;
+    padding: 20px;
+    transition-duration: 0.5s;
+    display: inline-block;
+    margin: 15px;
+}
+
+.text-single-container-blur:hover
+{
+    transform: translateY(-5px);
+}
+
 #name
 {
+    display:inline-block;
+    text-decoration: none;
     font-size: 21px;
     color: #e62f32;
     transition-duration: 0.5s;
@@ -213,8 +274,9 @@ a:hover
 
 #name:hover
 {
+    text-decoration: underline;
     color: #d15a5c;
-    transform: translate(0px, 10px);
+    transform: translate(0px, -3px);
 }
 
 .hz-navbar-mobile
@@ -234,7 +296,7 @@ a:hover
 
 #hz-navbar-mobile-list
 {
-    display: none;
+    opacity: 0;
     position: absolute;
     top: 0;
     left: -10px;
@@ -251,7 +313,7 @@ a:hover
 
 #hz-navbar-mobile-list.hz-active
 {
-    display: block;
+    opacity: 1;
 }
 
 #hz-navbar-mobile-list .hz-nav-item
@@ -276,4 +338,33 @@ a:hover
     min-height: 540px;
     width: 100%;
     position: fixed;
+}
+
+#Welcome
+{
+    animation: Welcome-Glow 1s ease-in-out infinite alternate;
+    margin-bottom: 0;
+}
+
+@keyframes Welcome-Glow
+{
+    from
+    {
+        text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+    }
+    to
+    {
+        text-shadow: -5px 5px 3px #ffadad, -8px 8px 3px #f35d74, -12px 12px 3px #bb2649, 5px 2px 2px rgba(206,89,55,0);
+    }
+}
+
+#email
+{
+    color: var(--hz-cyan-default);
+    transition-duration: 0.5s;
+}
+
+#email:hover
+{
+    color: #bb2649;
 }
