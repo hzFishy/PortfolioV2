@@ -35,6 +35,16 @@ function EndFile()
             }, 0);
         }
     });
+
+    $.ajax(
+        {
+            url: '/footer.html',
+            method: 'get',
+            success: function(data)
+            {
+                $('#footer').html(data);
+            }
+        });
 }
 
 

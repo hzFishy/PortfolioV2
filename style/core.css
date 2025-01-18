@@ -5,11 +5,13 @@
     --hz-cyan-dark-light: #448fef;
     --hz-green-dark: #73a39b;
     --hz-green-light: #bedad5;
+    
+    --hz-black-bodybackground: #222;
 }
 
 body
 {
-    background: #222;
+    background: var(--hz-black-bodybackground);
     color: ghostwhite;
     text-align: center;
 }
@@ -38,12 +40,14 @@ p
     display:inline-block;
     text-decoration: none;
     transition-duration: 0.5s;
+    color: var(--hz-cyan-default);
 }
 
 .link-basic:hover
 {
     text-decoration: underline;
     transform: translate(0px, -3px);
+    color: var(--hz-cyan-dark-light);
 }
 
 
@@ -370,4 +374,39 @@ p
 #email:hover
 {
     color: #bb2649;
+}
+
+
+#footer
+{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+    background: linear-gradient(var(--hz-black-bodybackground), #00000091), #1E1E1E;
+}
+
+.footer-content
+{
+    padding-top: 50px;
+    margin: 0;
+    color: var(--hz-green-dark);
+}
+
+.footer-content #website-link
+{
+    color: #bb2649;
+    text-decoration: none;
+}
+
+.footer-content #website-link:hover
+{
+    text-decoration: underline;
 }
