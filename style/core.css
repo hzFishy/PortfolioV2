@@ -178,6 +178,19 @@ p
     gap: 10px;
 }
 
+
+.hz-navbar-collapse
+{
+    @media (width > 1300px)
+    {
+        display: flex;
+    }
+    @media (width <= 1300px)
+    {
+        display: none;
+    }
+}
+
 .hz-nav-item
 {
     background: #2d2d2d;
@@ -186,15 +199,6 @@ p
     margin: 10px;
     transition-duration: 0.5s;
     box-sizing: border-box;
-
-    @media (width > 1300px)
-    {
-        display: block;
-    }
-    @media (width <= 1300px)
-    {
-        display: none;
-    }
 }
 
 .hz-nav-item:hover, .hz-nav-item.hz-active
