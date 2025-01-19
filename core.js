@@ -36,7 +36,7 @@ function EndFile()
         }
     });
 
-    $.ajax(
+   /* $.ajax(
         {
             url: '/footer.html',
             method: 'get',
@@ -44,7 +44,7 @@ function EndFile()
             {
                 $('#footer').html(data);
             }
-        });
+        });*/
 }
 
 
