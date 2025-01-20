@@ -68,12 +68,17 @@
                 <h1>Examples</h1>
                 <div class="skills-subcontainer-entry">
                     <div class="skills-subcontainer-title">
-                        <p class="skills-subcontainer-title-title">Multiplayer Inventory and Item systems</p>
+                        <p class="skills-subcontainer-title-title">Multiplayer inventory and equipment systems with items</p>
                         <a class="skills-subcontainer-title-button" onclick="OnSkillsDetailsClick(this, event)"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></a>
                     </div>
                     <div class="skills-subcontainer-details">
                         <ul>
-                            <li>Organize the codebase on the C++ and Blueprint side (including other not BP assets)</li>
+                            <li>(Inventory) Each inventory component owned a GameplayTag Container, allowing custom behaviors depending on possessed items and more</li>
+                            
+                            <li>(Equipment)</li>
+                            
+                            <li>(Items) For the items definition, I used Data Assets to be able to easily async load them at runtime</li>
+                            <li>(Items) For the items behaviors at runtime, I used instanced structs with Gameplay Abilities and Gameplay Effects (On Use, On Hold, On Equipped, ...)</li>
                         </ul>
                     </div>
                 </div>

@@ -637,7 +637,7 @@ p
 
 .skills-subcontainer-entry:hover, .skills-subcontainer-entry.hz-active
 {
-    filter: drop-shadow(0 0 5px rgba(247, 104, 104, 0.8));
+    //filter: drop-shadow(0 0 5px rgba(247, 104, 104, 0.8));
     border-color: rgba(247, 104, 104, 0.8);
 }
 
@@ -652,6 +652,7 @@ p
     color: white;
     margin-bottom: 0;
 }
+
 .skills-subcontainer-details ul
 {
     list-style-type: none;
@@ -691,14 +692,12 @@ p
 
 .skills-subcontainer-entry.hz-active .skills-subcontainer-details
 {
-    max-height: 100px;
+    max-height: 500px;
     opacity: 1;
     transition-duration: 0.5s;
 }
 
-.skills-subcontainer-entry.hz-active .skills-subcontainer-details ul, .skills-subcontainer-entry.hz-active .skills-subcontainer-details li
-{
-    max-height: 100px;
-    margin: 0;
+.skills-subcontainer-entry.hz-active .skills-subcontainer-details ul, .skills-subcontainer-entry.hz-active .skills-subcontainer-details li {
+    max-height: 500px;
     transition-duration: 0.5s;
 }
