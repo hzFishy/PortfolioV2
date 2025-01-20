@@ -361,9 +361,9 @@ p
 #top-header-background
 {
     display: block;
-    background-position: 0 0, 50%;
-    background-repeat: repeat, no-repeat;
-    background-size: auto, cover;
+    background-position: 0 0, 50%, 50%;
+    background-repeat: repeat, no-repeat, no-repeat;
+    background-size: auto, cover, cover;
     padding-bottom: 0;
     min-height: 540px;
     width: 100%;
