@@ -162,7 +162,7 @@ p
     transition-duration: 0.5s;
     left: 0;
     top: 17px;
-    width: 200px;
+    width: 120px;
     font-style: italic;
     font-size: 12px;
     text-shadow: none;
@@ -271,8 +271,13 @@ p
 .text-single-container
 {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     position: relative;
+}
+
+.no-bottom-margin
+{
+    margin-bottom: 0;
 }
 
 .text-single-container p
@@ -510,6 +515,7 @@ p
 
 #emailTooltipContainer
 {
+    cursor: pointer;
     transition-duration: 0.2s;
     display: inline-block;
     visibility: hidden;
@@ -543,11 +549,6 @@ p
         margin-right: 10px;
     }
     
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
     max-width: 1200px;
     border-style: dashed;
     border-radius: 20px;
@@ -567,6 +568,20 @@ p
     transform: translateY(-5px);
 }
 
+.skills-container-inner
+{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skills-container h1
+{
+    font-size: 40px;
+    color: var(--hz-red-soft);
+}
+
 .skills-subcontainer
 {
     margin-bottom: 20px;
@@ -581,6 +596,9 @@ p
     border-bottom-width: 4px;
     border-bottom-style: solid;
     border-radius: 20px;
+    
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .skills-subcontainer-title
@@ -631,8 +649,8 @@ p
     margin-bottom: 10px;
     text-align: left;
     
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .skills-subcontainer-entry:hover, .skills-subcontainer-entry.hz-active
@@ -676,6 +694,11 @@ p
 .skills-subcontainer-details ul
 {
     padding-left: 10px;
+}
+
+.skills-subcontainer-details li
+{
+    
 }
 
 .skills-subcontainer-details li:before

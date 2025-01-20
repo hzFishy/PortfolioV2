@@ -21,65 +21,70 @@
 <div id="main-container">
     <div class="text-single-container-blur">
         <div class="text-single-container">
-            <h1>My Skills</h1>
+            <h1 class="no-bottom-margin">My Skills</h1>
         </div>
     </div>
     <div class="text-single-container">
         <div class="skills-container">
-            <div class="skills-subcontainer">
-                <h1>Skills</h1>
-                <div class="skills-subcontainer-entry">
-                    <div class="skills-subcontainer-title">
-                        <p class="skills-subcontainer-title-title">Programming (BP, C++)</p>
-                        <a class="skills-subcontainer-title-button" onclick="OnSkillsDetailsClick(this, event)"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></a>
-                    </div>
-                    <div class="skills-subcontainer-details">
-                        <ul>
-                            <li>Organize the codebase on the C++ and Blueprint side (including other not BP assets)</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="skills-subcontainer-entry">
-                    <div class="skills-subcontainer-title">
-                        <p class="skills-subcontainer-title-title">Level designing in the Editor</p>
-                        <a class="skills-subcontainer-title-button" onclick="OnSkillsDetailsClick(this, event)"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></a>
-                    </div>
-                    <div class="skills-subcontainer-details">
-                        <ul>
-                            <li>detail 1</li>
-                            <li>detail 2</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="skills-subcontainer-entry">
-                    <div class="skills-subcontainer-title">
-                        <p class="skills-subcontainer-title-title">UI Design</p>
-                        <a class="skills-subcontainer-title-button" onclick="OnSkillsDetailsClick(this, event)"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></a>
-                    </div>
-                    <div class="skills-subcontainer-details">
-                        <ul>
-                            <li>detail 1</li>
-                            <li>detail 2</li>
-                        </ul>
-                    </div>
-                </div>
+            <div>
+                <h1>Unreal Engine</h1>
             </div>
-            <div class="skills-subcontainer">
-                <h1>Examples</h1>
-                <div class="skills-subcontainer-entry">
-                    <div class="skills-subcontainer-title">
-                        <p class="skills-subcontainer-title-title">Multiplayer inventory and equipment systems with items</p>
-                        <a class="skills-subcontainer-title-button" onclick="OnSkillsDetailsClick(this, event)"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></a>
+            <div class="skills-container-inner">
+                <div class="skills-subcontainer">
+                    <h2>Skills</h2>
+                    <div class="skills-subcontainer-entry">
+                        <div class="skills-subcontainer-title">
+                            <p class="skills-subcontainer-title-title">Programming (BP, C++)</p>
+                            <a class="skills-subcontainer-title-button" onclick="OnSkillsDetailsClick(this, event)"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></a>
+                        </div>
+                        <div class="skills-subcontainer-details">
+                            <ul>
+                                <li>Organize the codebase on the C++ and Blueprint side (including other not BP assets)</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="skills-subcontainer-details">
-                        <ul>
-                            <li>(Inventory) Each inventory component owned a GameplayTag Container, allowing custom behaviors depending on possessed items and more</li>
-                            
-                            <li>(Equipment)</li>
-                            
-                            <li>(Items) For the items definition, I used Data Assets to be able to easily async load them at runtime</li>
-                            <li>(Items) For the items behaviors at runtime, I used instanced structs with Gameplay Abilities and Gameplay Effects (On Use, On Hold, On Equipped, ...)</li>
-                        </ul>
+                    <div class="skills-subcontainer-entry">
+                        <div class="skills-subcontainer-title">
+                            <p class="skills-subcontainer-title-title">Level designing in the Editor</p>
+                            <a class="skills-subcontainer-title-button" onclick="OnSkillsDetailsClick(this, event)"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></a>
+                        </div>
+                        <div class="skills-subcontainer-details">
+                            <ul>
+                                <li>detail 1</li>
+                                <li>detail 2</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="skills-subcontainer-entry">
+                        <div class="skills-subcontainer-title">
+                            <p class="skills-subcontainer-title-title">UI Design</p>
+                            <a class="skills-subcontainer-title-button" onclick="OnSkillsDetailsClick(this, event)"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></a>
+                        </div>
+                        <div class="skills-subcontainer-details">
+                            <ul>
+                                <li>detail 1</li>
+                                <li>detail 2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-subcontainer">
+                    <h2>Examples</h2>
+                    <div class="skills-subcontainer-entry">
+                        <div class="skills-subcontainer-title">
+                            <p class="skills-subcontainer-title-title">Multiplayer inventory and equipment systems with items</p>
+                            <a class="skills-subcontainer-title-button" onclick="OnSkillsDetailsClick(this, event)"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></a>
+                        </div>
+                        <div class="skills-subcontainer-details">
+                            <ul>
+                                <li>(Inventory) Each inventory component owned a GameplayTag Container, allowing custom behaviors depending on possessed items and more</li>
+
+                                <li>(Equipment)</li>
+
+                                <li>(Items) For the items definition, I used Data Assets to be able to easily async load them at runtime</li>
+                                <li>(Items) For the items behaviors at runtime, I used instanced structs with Gameplay Abilities and Gameplay Effects (On Use, On Hold, On Equipped, ...)</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
