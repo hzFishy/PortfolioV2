@@ -51,7 +51,7 @@ function EndFile()
 function OnMobileNavClick()
 {
     var listElement = document.getElementById("hz-navbar-mobile-list");
-    var menuElement = document.getElementById("hz-navbar-mobile-menu");
+    var menuElement = document.getElementById("hz-navbar-mobile-menu-container");
     if (listElement.classList.contains("hz-active"))
     {
         listElement.classList.remove("hz-active");
@@ -62,5 +62,40 @@ function OnMobileNavClick()
     {
         listElement.classList.add("hz-active");
         menuElement.classList.add("hz-active");
+    }
+}
+
+
+function TooltipClickEmail()
+{
+    var copyText = document.getElementById("email");
+    navigator.clipboard.writeText(copyText.innerText);
+
+    var tooltip = document.getElementById("emailTooltip");
+    tooltip.classList.add("hz-active")
+    tooltip.innerHTML = "Email copied!";
+}
+
+function TooltipOutEmail()
+{
+    var tooltip = document.getElementById("emailTooltip");
+    tooltip.classList.remove("hz-active")
+    tooltip.innerText = "Copy";
+}
+
+function OnSkillsDetailsClick(element, event)
+{
+    var details = $(element).parent().parent()[0];
+    //console.log(details);
+    if (details.classList.contains("hz-active"))
+    {
+        details.classList.remove("hz-active");
+        $(element).find($("img")).attr('src','/data/icons/ggle_unfold.svg');
+    }
+    else
+    {
+        console.log($(element).find($("img")));
+        details.classList.add("hz-active");
+        $(element).find($("img")).attr('src','/data/icons/ggle_fold.svg');
     }
 }

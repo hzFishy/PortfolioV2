@@ -1,10 +1,90 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"><link href="/style/timeline.css" rel="stylesheet">
+
+    <link href="/style/core.css" rel="stylesheet">
+    <script src="/core.js"></script>
+    <title>hzFishy - Skills</title>
 </head>
 <body>
-$END$
+<div id="top-header-background" style="background-image: linear-gradient(#00000091, #222), url('https://portfoliov2.hzfishy.fr/data/img/UnrealEngineBackground.png')">    </div>
+<div id="header"></div>
+<div id="main-container">
+    <div class="text-single-container-blur">
+        <div class="text-single-container">
+            <h1>My Skills</h1>
+        </div>
+    </div>
+    <div class="text-single-container">
+        <div class="skills-container">
+            <div class="skills-subcontainer">
+                <h1>Skills</h1>
+                <div class="skills-subcontainer-entry">
+                    <div class="skills-subcontainer-title">
+                        <p class="skills-subcontainer-title-title">Programming (BP, C++)</p>
+                        <a class="skills-subcontainer-title-button" onclick="OnSkillsDetailsClick(this, event)"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></a>
+                    </div>
+                    <div class="skills-subcontainer-details">
+                        <ul>
+                            <li>Organize the codebase on the C++ and Blueprint side (including other not BP assets)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skills-subcontainer-entry">
+                    <div class="skills-subcontainer-title">
+                        <p class="skills-subcontainer-title-title">Level designing in the Editor</p>
+                        <a class="skills-subcontainer-title-button" onclick="OnSkillsDetailsClick(this, event)"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></a>
+                    </div>
+                    <div class="skills-subcontainer-details">
+                        <ul>
+                            <li>detail 1</li>
+                            <li>detail 2</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skills-subcontainer-entry">
+                    <div class="skills-subcontainer-title">
+                        <p class="skills-subcontainer-title-title">UI Design</p>
+                        <a class="skills-subcontainer-title-button" onclick="OnSkillsDetailsClick(this, event)"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></a>
+                    </div>
+                    <div class="skills-subcontainer-details">
+                        <ul>
+                            <li>detail 1</li>
+                            <li>detail 2</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-subcontainer">
+                <h1>Examples</h1>
+                <div class="skills-subcontainer-entry">
+                    <div class="skills-subcontainer-title">
+                        <p class="skills-subcontainer-title-title">Multiplayer Inventory and Item systems</p>
+                        <a class="skills-subcontainer-title-button" onclick="OnSkillsDetailsClick(this, event)"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></a>
+                    </div>
+                    <div class="skills-subcontainer-details">
+                        <ul>
+                            <li>Organize the codebase on the C++ and Blueprint side (including other not BP assets)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</div>
+<div id="footer"></div>
+<script>
+    EndFile();
+</script>
 </body>
 </html>
