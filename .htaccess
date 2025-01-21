@@ -1,0 +1,3 @@
+#ErrorDocument 404 default
+
+ErrorDocument 404 /404.html
