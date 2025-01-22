@@ -94,7 +94,7 @@ function OnSkillsDetailsClick(element, event)
     }
     else
     {
-        console.log($(element).find($("img")));
+        //console.log($(element).find($("img")));
         details.classList.add("hz-active");
         $(element).find($("img")).attr('src','/data/icons/ggle_fold.svg');
     }

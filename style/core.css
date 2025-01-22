@@ -554,6 +554,7 @@ p
 .skills-container
 {
     transition-duration: 0.5s;
+    scroll-margin-top: 100px;
 
     @media (width > 1300px)
     {
