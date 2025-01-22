@@ -68,8 +68,8 @@ function OnMobileNavClick()
 
 function TooltipClickEmail()
 {
-    var copyText = document.getElementById("email");
-    navigator.clipboard.writeText(copyText.innerText);
+    //var copyText = document.getElementById("email");
+    navigator.clipboard.writeText("contact@hzfishy.fr"); // hard coded for now because it gets childs span content to
 
     var tooltip = document.getElementById("emailTooltip");
     tooltip.classList.add("hz-active")
