@@ -656,6 +656,7 @@ p
 
 .skills-subcontainer-title
 {
+    cursor: pointer;
     padding-left: 10px;
     align-items: center;
     margin-bottom: 0.5px;
@@ -663,6 +664,12 @@ p
     flex-direction: row;
     justify-content: space-between
 }
+
+.skills-subcontainer-title p
+{
+    cursor: auto;
+}
+
 
 .skills-subcontainer-title .skills-subcontainer-title-title
 {

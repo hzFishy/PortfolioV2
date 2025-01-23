@@ -85,7 +85,7 @@ function TooltipOutEmail()
 
 function OnSkillsDetailsClick(element, event)
 {
-    var details = $(element).parent().parent()[0];
+    var details = $(element).parent()[0];
     //console.log(details);
     if (details.classList.contains("hz-active"))
     {
