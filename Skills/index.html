@@ -160,37 +160,35 @@
                             <p>- For a solo school project I chosed to make an Endless Runner in less than 3 months.</p>
                             <p>- I made a CSV Reader to convert <a class="link-basic" href="https://docs.google.com/spreadsheets/d/1Km92vGee23Bw9NUooPjLF2fPezFmim9prriUAJhA5Ac/edit?usp=sharing" target="blank_">my google sheet</a> values into weighted lists. Those lists were used at runtime by the level generator to determine what elements to spawn, at what distance, interval, height, etc</p>
                             <p>- This runtime level generator also handled background elements.</p>
-                            <p>- To properly debug the generation, I used in various way Unity's Gizmo draw methods. <a class="link-basic" href="#">See here</a></p>
+                            <p>- To properly debug the generation, I used in various way Unity's Gizmo draw methods. <a class="link-basic" href="https://imgur.com/a/WzqaORZ" target="_blank">See here</a></p>
                         </div>
                     </div>
                     
                     <div class="skills-subcontainer-entry">
                         <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                            <p class="skills-subcontainer-title-title">Complex input action system with root motion animations</p>
+                            <p class="skills-subcontainer-title-title">Complex input action system with root "motion" animations</p>
                             <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
                         </a>
                         <div class="skills-subcontainer-details">
-                            <p>- This was also for the Endless Runner project. The goal was that instead of having X default actions (go left, go right, jump, slide) that can be done anytime, I wanted to only allow jumping and sliding, and the other actions would only be available at specific distances to the trap.</p>
+                            <p>- This was also for the Endless Runner project. Since I was limited to the space bar, the goal was that depending on the player and level context, specific actions would occure when pressing/holding/releasing the space bar.</p>
+                            <p>- So instead of having X default actions (go left, go right, jump, slide) that can be done anytime, I wanted to only allow jumping and sliding, and the other actions would only be available at specific distances to the trap.</p>
+                            <p>- Since the player is constantly going forward, all the actions (Jumping, Sliding, Go Left, Go Right, Boost climing, Boost zipline, Vault) are using root "motion" animations, this means that the animation play rate and placement would be determined at runtime depending on the player position.</p>
                         </div>
                     </div>
                     
                     <div class="skills-subcontainer-entry">
                         <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                            <p class="skills-subcontainer-title-title">Data driven AI system  (Idle, attack  (Detection, tracking, charging, attacking and recovering) and pushed).</p>
+                            <p class="skills-subcontainer-title-title">Data driven AI system.</p>
                             <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
                         </a>
                         <div class="skills-subcontainer-details">
-                            <p>- aaaaa</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skills-subcontainer-entry">
-                        <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                            <p class="skills-subcontainer-title-title">Combat "push" physic mechanic with force transfer combined with ragdoll.</p>
-                            <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
-                        </a>
-                        <div class="skills-subcontainer-details">
-                            <p>- aaaaa</p>
+                            <p>- For a brawler (combat) school project, we needed various states for our AIs, and most of those states were determined by data, such as the cooldows, recovery time, etc (<a class="link-basic" href="https://imgur.com/a/29vJiIi" target="_blank">See here</a>)</p>
+                            <p>- Our AIs had 4 main states: </p>
+                            <p>   - Idle: The AI doesn't do anything (Before the AI would move around randomly before the player goes inside the arena, but because of our design choices we removed that))</p>
+                            <p>   - Attacking: The AI would track the player while they are in the arena (using AI Nav Agent), once the player close anough it charges its attack and does a specific amoutn of damage if the player is in the damage zone (Each AI had a different damage shape).</p>
+                            <p>   - Recovering: After the attack sequence, the AI recovers for a specific amount of time. If nothing happens to the AI, it will eventually go back in attack mode.</p>
+                            <p>   - Pushed: If the AI is attacked by the player and hit, it's "pushed", meaning the AI would play an animation and fall on the ground, making it vulnerable. If an AI is pushed on another (that isn't pushed) it will push it, creating a chain reaction.</p>
+                            <p>- All of those states are debuggable with a UI canvas and reflected with visual and sounds effect (player feedbacks).</p>
                         </div>
                     </div>
                     
