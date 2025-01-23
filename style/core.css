@@ -84,10 +84,30 @@ p
     animation-duration: 1.5s;
     animation-name: anim-intro-fade;
     animation-delay: 0s;
-    animation-fill-mode: backwards;
+    animation-fill-mode: forwards;
 }
 
 @keyframes anim-intro-fade
+{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+#top-header-background
+{
+    animation-duration: 3s;
+    animation-name: anim-intro-fade-header-background;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes anim-intro-fade-header-background
 {
     0%
     {
@@ -436,9 +456,10 @@ p
     background-repeat: repeat, no-repeat;
     background-size: auto, cover;
     padding-bottom: 0;
-    min-height: 540px;
+    height: 1000px;
     width: 100%;
-    position: fixed;
+    position: absolute;
+    top: 0;
 }
 
 #Welcome
@@ -653,6 +674,7 @@ p
 .skills-subcontainer-title-button img
 {
     cursor: pointer;
+    max-height: 20px;
 }
 
 .skills-subcontainer-title-button
@@ -703,7 +725,7 @@ p
 {
     //filter: drop-shadow(0 0 5px rgba(247, 104, 104, 0.8));
     border-color: rgba(247, 104, 104, 0.8);
-    box-shadow: 0px 0px 18px 0px rgb(234, 53, 53);
+    box-shadow: 0px 0px 18px 0px rgba(234, 53, 53, 0.5);
 }
 
 .skills-subcontainer-entry.hz-active
@@ -714,8 +736,9 @@ p
 .skills-subcontainer-entry a
 {
     text-decoration: none;
-    color: white;
+    //color: white;
     margin-bottom: 0;
+    font-size: 15px;
 }
 
 .skills-subcontainer-details p
@@ -788,8 +811,8 @@ p
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 7px;
+    padding-right: 7px;
     padding-top: 10px;
     padding-bottom: 10px;
     
@@ -813,6 +836,27 @@ p
 
     box-shadow: 0px 0px 18px 0px rgba(45,255,196,0.9);
 }
+
+.generic-button:before,  .generic-button:after
+{
+    opacity: 0;
+}
+
+.generic-button:hover:before,  .generic-button:hover:after
+{
+    opacity: 1;
+}
+
+.generic-button:after
+{
+    content: " <<";
+}
+
+.generic-button:before
+{
+    content: " >> ";
+}
+
 
 .sticky-gobackup-container
 {
