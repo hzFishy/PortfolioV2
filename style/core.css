@@ -14,6 +14,9 @@
     --hz-black-mid: #2d2d2d;
     --hz-black-low: #454545;
     
+    --hz--gray-low: rgba(135, 135, 135, .35);
+    --hz--gray-low-nottrans: rgba(135, 135, 135, 1);
+    
     --hz-green-success: #2E8B57;
     --hz-green-mid: #8FBC8F;
     
@@ -22,6 +25,8 @@
     --hz-red-softer: #f76868;
     
     --hz-black-bodybackground: #222;
+    
+    --hz-skills-transbg: rgba(30, 30, 30, 0.39);
 }
 
 *
@@ -335,7 +340,7 @@ p
 .text-single-container-blur
 {
     position: relative;
-    background-color: rgba(135, 135, 135, .35);
+    background-color: var(--hz--gray-low);
     border: 1px solid rgba(135, 135, 135, .5);
     box-shadow: 0 0 18px rgba(0, 0, 0, .2);
     border-radius: 15px;
@@ -348,6 +353,7 @@ p
 .text-single-container-blur:hover
 {
     transform: translateY(-5px);
+    background-color: rgba(135, 135, 135, .40);
 }
 
 #name
@@ -533,7 +539,7 @@ p
 {
     transition-duration: 0.5s;
     width: 140px;
-    background-color: var(--hz-black-mid);
+    background-color: var(--hz--gray-low-nottrans);
     color: #fff;
     text-align: center;
     border-radius: 6px;
@@ -594,7 +600,7 @@ p
     border-width: 2px;
     border-color: var(--hz-red-soft);
     
-    background-color: var(--hz-black-hard);
+    background-color: var(--hz-skills-transbg);
     box-shadow: 0px 2px 5px 5px rgba(255, 0, 0, 0.2);
     padding-top: 20px;
     margin-top: 20px;
@@ -652,6 +658,11 @@ p
     border-bottom-style: groove;
     padding-bottom: 5px;
     margin-bottom: 2px;
+}
+
+.skills-subcontainer-entry.hz-active
+{
+    margin-bottom: 20px;
 }
 
 .skills-subcontainer-title
@@ -754,7 +765,7 @@ p
     max-width: 800px;
 }
 
-.skills-subcontainer-entry p
+.skills-subcontainer-title-title
 {
     color: white;
     margin-bottom: 0;
@@ -770,6 +781,7 @@ p
 
 .skills-subcontainer-details p
 {
+    color: white;
     padding-left: 10px;
     white-space: pre-wrap;
     font-size: 15px;
@@ -874,4 +886,19 @@ p
 {
     position: sticky;
     top: 20px;
+}
+
+.header-background-spacer
+{
+    margin-bottom: 10vh;
+}
+
+.center-screen
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 40vh;
 }
