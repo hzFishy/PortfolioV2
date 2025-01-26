@@ -660,6 +660,11 @@ p
     margin-bottom: 2px;
 }
 
+.skills-subcontainer-entry.hz-active .skills-subcontainer-details
+{
+    margin-bottom: 10px;
+}
+
 .skills-subcontainer-entry.hz-active
 {
     margin-bottom: 20px;
@@ -763,6 +768,17 @@ p
 {
     list-style-type: none;
     max-width: 800px;
+
+    max-height: 0;
+    margin: 0;
+    transition-duration: 0.1s;
+    margin-right: 10px;
+
+    color: #dd9f9f;
+    padding-left: 10px;
+    white-space: pre-wrap;
+    font-size: 15px;
+    font-style: normal;
 }
 
 .skills-subcontainer-title-title
@@ -771,22 +787,6 @@ p
     margin-bottom: 0;
 }
 
-.skills-subcontainer-details p
-{
-    max-height: 0;
-    margin: 0;
-    transition-duration: 0.1s;
-    margin-right: 10px;
-}
-
-.skills-subcontainer-details p
-{
-    color: #dd9f9f;
-    padding-left: 10px;
-    white-space: pre-wrap;
-    font-size: 15px;
-    font-style: normal;
-}
 
 .skills-subcontainer-details
 {
