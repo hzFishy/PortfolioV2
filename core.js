@@ -99,3 +99,9 @@ function OnSkillsDetailsClick(element, event)
         $(element).find($("img")).attr('src','/data/icons/ggle_fold.svg');
     }
 }
+
+function GoBackUp()
+{
+    window.location.href='#top-header-background';
+    window.location.hash = '';
+}

@@ -494,7 +494,7 @@ p
 
 #email:hover
 {
-    color: #bb2649;
+    color: #ffa6bb;
 }
 
 
@@ -781,7 +781,7 @@ p
 
 .skills-subcontainer-details p
 {
-    color: white;
+    color: #dd9f9f;
     padding-left: 10px;
     white-space: pre-wrap;
     font-size: 15px;
@@ -901,4 +901,16 @@ p
     align-items: center;
     text-align: center;
     min-height: 40vh;
+}
+
+#gobackup
+{
+    background-color: red;
+    height: 30px;
+    width: 30px;
+    
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
 }

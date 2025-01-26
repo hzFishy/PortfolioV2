@@ -16,259 +16,310 @@
     <title>hzFishy - Skills</title>
 </head>
 <body>
-<div id="top-header-background" style="background-image: linear-gradient(#00000091, #222), url('https://portfoliov2.hzfishy.fr/data/img/UnrealEngineBackground2.png')">    </div>
-<div id="header"></div>
-<div id="main-container">
-    <div class="center-screen">
-        <div class="text-single-container-blur">
-            <div class="text-single-container">
-                <h1>My Skills</h1>
+    <div id="top-header-background" style="background-image: linear-gradient(#00000091, #222), url('https://portfoliov2.hzfishy.fr/data/img/UnrealEngineBackground2.png')">    </div>
+    <div id="header"></div>
+    
+    <div id="main-container">
+        
+        <div id="gobackup">
+            <a onclick="GoBackUp()">
+                <img src="https://portfoliov2.hzfishy.fr/data/icons/ggle_arrow_up" alt="Go up">
+            </a>
+        </div>
+        
+        <div class="center-screen">
+            <div class="text-single-container-blur">
                 <div class="text-single-container">
-                    <p>Here you can find the various skills I gathered while working on various kind of projects (personal, school and professional).</p>
-                    <div class="generic-button-container">
-                        <a class="generic-button" href="#UnrealEngine">Unreal Engine</a>
-                        <a class="generic-button" href="#Unity">Unity</a>
-                        <a class="generic-button" href="#Other">Other</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="header-background-spacer"></div>
-    
-    <div class="text-single-container">
-        <div class="skills-container" id="UnrealEngine">
-            <div>
-                <h1>Unreal Engine</h1>
-            </div>
-            <div class="skills-container-inner">
-                <div class="skills-subcontainer">
-                    <h2>Skills</h2>
-                    <div class="skills-subcontainer-entry">
-                        <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                            <span class="skills-subcontainer-title-title">Programming (BP, C++)</span>
-                            <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
-                        </a>
-                        <div class="skills-subcontainer-details">
-                            <p>- Organize the codebase on the C++ and Blueprint side (including other not BP assets)</p>
-                        </div>
-                    </div>
-                    <div class="skills-subcontainer-entry">
-                        <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                            <span class="skills-subcontainer-title-title">Level design</span>
-                            <span class="skills-subcontainer-title-button" onclick="OnSkillsDetailsClick(this, event)"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
-                        </a>
-                        <div class="skills-subcontainer-details">
-                            <p>- detail 1</p>
-                            <p>- detail 2</p>
-                        </div>
-                    </div>
-                    <div class="skills-subcontainer-entry">
-                        <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                            <span class="skills-subcontainer-title-title">UI Design</span>
-                            <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
-                        </a>
-                        <div class="skills-subcontainer-details">
-                            <p>- detail 1</p>
-                            <p>- detail 2</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="skills-subcontainer">
-                    <h2>Examples of systems I made</h2>
-                    <div class="skills-subcontainer-entry">
-                        <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                            <span class="skills-subcontainer-title-title">Multiplayer inventory and equipment systems with items</span>
-                            <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
-                        </a>
-                        <div class="skills-subcontainer-details">
-                            <p>- Inventory</p>
-                            <p>   - Each inventory component owned a GameplayTag Container, allowing custom behaviors depending on possessed items and more</p>
-
-                            <p>- (Equipment)</p>
-
-                            <p>- (Items) For the items definition, I used Data Assets to be able to easily async load them at runtime</p>
-                            <p>- (Items) For the items behaviors at runtime, I used instanced structs with Gameplay Abilities and Gameplay Effects (On Use, On Hold, On Equipped, ...)</p>
+                    <h1>My Skills</h1>
+                    <div class="text-single-container">
+                        <p>Here you can find the various skills I gathered while working on various kind of projects (personal, school and professional).</p>
+                        <div class="generic-button-container">
+                            <a class="generic-button" href="#UnrealEngine">Unreal Engine</a>
+                            <a class="generic-button" href="#Unity">Unity</a>
+                            <a class="generic-button" href="#Other">Other</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="text-single-container">
-        <div class="skills-container" id="Unity">
-            <div>
-                <h1>Unity</h1>
-            </div>
-            <div class="skills-container-inner">
-                <div class="skills-subcontainer">
-                    <h2>Skills</h2>
-                    
-                    <div class="skills-subcontainer-entry">
-                        <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                            <span class="skills-subcontainer-title-title">Programming</span>
-                            <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
-                        </a>
-                        <div class="skills-subcontainer-details">
-                            <p>- Using C# and Unity framework.</p>
-                            <p>- Good organization and naming conventions.</p>
-                            <p>- Always preferring the modular (not hardcoded) path.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skills-subcontainer-entry">
-                        <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                            <span class="skills-subcontainer-title-title">Level Design</span>
-                            <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
-                        </a>
-                        <div class="skills-subcontainer-details">
-                            <p>- Used Unity legacy tools and Pro Builder plugin to make levels.</p>
-                            <p>- I usually apply a modular design to my workflows, scripts and prefabs to make the integrations and future changes as seamless as possible. This speeds up a lot the iterations</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skills-subcontainer-entry">
-                        <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                            <span class="skills-subcontainer-title-title">UI progamming with UX design</span>
-                            <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
-                        </a>
-                        <div class="skills-subcontainer-details">
-                            <p>- I make my UI features, code, design and prefabs modular as much as needed (and possible) to fit the current needs and any future changes. This improves the iteration speed when adding/removing UI menus/elements.</p>
-                            <p>- Make all UI content decently readable so no users are lost in the menus and options.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="skills-subcontainer-entry">
-                        <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                            <span class="skills-subcontainer-title-title">AI progamming and design</span>
-                            <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
-                        </a>
-                        <div class="skills-subcontainer-details">
-                            <p>- AI modularity for seamless iterations</p>
-                            <p>- State machines with various behaviors</p>
-                        </div>
-                    </div>
-                    
+        
+        <div class="header-background-spacer"></div>
+        
+        <div class="text-single-container">
+            <div class="skills-container" id="UnrealEngine">
+                <div>
+                    <h1>Unreal Engine</h1>
                 </div>
-                <div class="skills-subcontainer">
-                    <h2>Examples of systems I made</h2>
+                <div class="skills-container-inner">
                     
-                    <div class="skills-subcontainer-entry">
-                        <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                            <span class="skills-subcontainer-title-title">Procedural level generation</span>
-                            <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
-                        </a>
-                        <div class="skills-subcontainer-details">
-                            <p>- For a solo school project I chosed to make an Endless Runner in less than 3 months.</p>
-                            <p>- I made a CSV Reader to convert <a class="link-basic" href="https://docs.google.com/spreadsheets/d/1Km92vGee23Bw9NUooPjLF2fPezFmim9prriUAJhA5Ac/edit?usp=sharing" target="blank_">my google sheet</a> values into weighted lists. Those lists were used at runtime by the level generator to determine what elements to spawn, at what distance, interval, height, etc</p>
-                            <p>- This runtime level generator also handled background elements.</p>
-                            <p>- To properly debug the generation, I used in various way Unity's Gizmo draw methods. <a class="link-basic" href="https://imgur.com/a/WzqaORZ" target="_blank">See here</a></p>
+                    <div class="skills-subcontainer">
+                        <h2>Skills</h2>
+                        
+                        <div class="skills-subcontainer-entry">
+                            <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
+                                <span class="skills-subcontainer-title-title">Programming</span>
+                                <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                            </a>
+                            <div class="skills-subcontainer-details">
+                                <p>- C++ and Blueprint Visual Scripting</p>
+                                <p>- Organize the codebase on the C++ and Blueprint side (including other not BP assets)</p>
+                            </div>
                         </div>
+                        
+                        <div class="skills-subcontainer-entry">
+                            <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
+                                <span class="skills-subcontainer-title-title">Level design</span>
+                                <span class="skills-subcontainer-title-button" onclick="OnSkillsDetailsClick(this, event)"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                            </a>
+                            <div class="skills-subcontainer-details">
+                                <p>- I usually apply a modular design to my workflows, scripts and actors/components to make the integrations and future changes as seamless as possible. This speeds up a lot the iterations</p>
+                                <p>- Smart use of actor palettes, world materials, shortcuts for quick then detailed placement</p>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-subcontainer-entry">
+                            <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
+                                <span class="skills-subcontainer-title-title">UI Design</span>
+                                <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                            </a>
+                            <div class="skills-subcontainer-details">
+                                <p>- I make my UI features, code, design and prefabs modular as much as needed (and possible) to fit the current needs and any future changes. This improves the iteration speed when adding/removing UI menus/elements.</p>
+                                <p>- Make all UI content decently readable so no users are lost in the menus and options.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-subcontainer-entry">
+                            <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
+                                <span class="skills-subcontainer-title-title">AI management and design</span>
+                                <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                            </a>
+                            <div class="skills-subcontainer-details">
+                                <p>- Think through all usages of our AIs before implementing a system.</p>
+                                <p>- Good knowledge of AI Controllers, Behavior Trees, State Trees and their components.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-subcontainer-entry">
+                            <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
+                                <span class="skills-subcontainer-title-title">Multiplayer</span>
+                                <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                            </a>
+                            <div class="skills-subcontainer-details">
+                                <p>- How networking works in UE.</p>
+                                <p>- Implementation and use of the Epic Online Services (EOS) framework through the EOS SDK and UE plugins.</p>
+                                <p>- Lightweight and safe replication with client prediction.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-subcontainer-entry">
+                            <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
+                                <span class="skills-subcontainer-title-title">Gameplay Ability System (GAS) framework</span>
+                                <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                            </a>
+                            <div class="skills-subcontainer-details">
+                                <p>- Ability System Component.</p>
+                                <p>- Attributes.</p>
+                                <p>- Gameplay Abilities.</p>
+                                <p>- Gameplay Effects.</p>
+                            </div>
+                        </div>
+                        
                     </div>
                     
-                    <div class="skills-subcontainer-entry">
-                        <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                            <span class="skills-subcontainer-title-title">Complex input action system with root "motion" animations</span>
-                            <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
-                        </a>
-                        <div class="skills-subcontainer-details">
-                            <p>- This was also for the Endless Runner project. Since I was limited to the space bar, the goal was that depending on the player and level context, specific actions would occure when pressing/holding/releasing the space bar.</p>
-                            <p>- So instead of having X default actions (go left, go right, jump, slide) that can be done anytime, I wanted to only allow jumping and sliding, and the other actions would only be available at specific distances to the trap.</p>
-                            <p>- Since the player is constantly going forward, all the actions (Jumping, Sliding, Go Left, Go Right, Boost climing, Boost zipline, Vault) are using root "motion" animations, this means that the animation play rate and placement would be determined at runtime depending on the player position.</p>
+                    <div class="skills-subcontainer">
+                        <h2>Examples of systems I made</h2>
+                        <div class="skills-subcontainer-entry">
+                            <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
+                                <span class="skills-subcontainer-title-title">Multiplayer inventory and equipment systems with items</span>
+                                <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                            </a>
+                            <div class="skills-subcontainer-details">
+                                <p>- Inventory</p>
+                                <p>   - Each inventory component owned a GameplayTag Container, allowing custom behaviors depending on possessed items and more</p>
+    
+                                <p>- (Equipment)</p>
+    
+                                <p>- (Items) For the items definition, I used Data Assets to be able to easily async load them at runtime</p>
+                                <p>- (Items) For the items behaviors at runtime, I used instanced structs with Gameplay Abilities and Gameplay Effects (On Use, On Hold, On Equipped, ...)</p>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="skills-subcontainer-entry">
-                        <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                            <span class="skills-subcontainer-title-title">Data driven AI system.</span>
-                            <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
-                        </a>
-                        <div class="skills-subcontainer-details">
-                            <p>- For a brawler (combat) school project, we needed various states for our AIs, and most of those states were determined by data, such as the cooldows, recovery time, etc (<a class="link-basic" href="https://imgur.com/a/29vJiIi" target="_blank">See here</a>)</p>
-                            <p>- Our AIs had 4 main states: </p>
-                            <p>   - Idle: The AI doesn't do anything (Before the AI would move around randomly before the player goes inside the arena, but because of our design choices we removed that))</p>
-                            <p>   - Attacking: The AI would track the player while they are in the arena (using AI Nav Agent), once the player close anough it charges its attack and does a specific amoutn of damage if the player is in the damage zone (Each AI had a different damage shape).</p>
-                            <p>   - Recovering: After the attack sequence, the AI recovers for a specific amount of time. If nothing happens to the AI, it will eventually go back in attack mode.</p>
-                            <p>   - Pushed: If the AI is attacked by the player and hit, it's "pushed", meaning the AI would play an animation and fall on the ground, making it vulnerable. If an AI is pushed on another (that isn't pushed) it will push it, creating a chain reaction.</p>
-                            <p>- All of those states are debuggable with a UI canvas and reflected with visual and sounds effect (player feedbacks).</p>
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
         </div>
-    </div>
     
-    <div class="text-single-container">
-        <div class="skills-container" id="Other">
-            <div>
-                <h1>Other</h1>
-            </div>
-            <div class="skills-container-inner">
-                <div class="skills-subcontainer">
-                    <h2>Skills</h2>
-                    
-                    <div class="skills-subcontainer-entry">
-                        <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                            <span class="skills-subcontainer-title-title">Web</span>
-                            <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
-                        </a>
-                        <div class="skills-subcontainer-details">
-                            <p>- Frontend: HTML, CSS, JavaScript</p>
-                            <p>- Backend: PHP, SQL</p>
-                            <p>- Other tools: Mermaid, XAMPP</p>
-                        </div>
-                    </div>
-                    
+        <div class="text-single-container">
+            <div class="skills-container" id="Unity">
+                <div>
+                    <h1>Unity</h1>
                 </div>
-                <div class="skills-subcontainer">
-                    <h2>Examples</h2>
-                    
-                    <div class="skills-subcontainer-entry">
-                        <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                            <span class="skills-subcontainer-title-title">This website</span>
-                            <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
-                        </a>
-                        <div class="skills-subcontainer-details">
-                            <p>- This portfolio website was made by myself using HTML, CSS and JS. It's hosted using Github Pages free plan.</p>
+                <div class="skills-container-inner">
+                    <div class="skills-subcontainer">
+                        <h2>Skills</h2>
+                        
+                        <div class="skills-subcontainer-entry">
+                            <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
+                                <span class="skills-subcontainer-title-title">Programming</span>
+                                <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                            </a>
+                            <div class="skills-subcontainer-details">
+                                <p>- Using C# and Unity framework.</p>
+                                <p>- Good organization and naming conventions.</p>
+                                <p>- Always preferring the modular (not hardcoded) path.</p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="skills-subcontainer-entry">
-                        <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                            <span class="skills-subcontainer-title-title">Craft Viewer Tool</span>
-                            <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
-                        </a>
-                        <div class="skills-subcontainer-details">
-                            <p>- When working on a game project, I needed a way to visualize the ingredients dependencies of my items.</p>
-                            <p>- You can create resources, items and set ingredients for them.</p>
-                            <p>- You can then naviguate in a generated graph (using Mermaid) and see what ingredients an item needs with various level of details.</p>
-                            <p>- You can also move around in the graph and zoom in and out.</p>
+                        
+                        <div class="skills-subcontainer-entry">
+                            <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
+                                <span class="skills-subcontainer-title-title">Level Design</span>
+                                <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                            </a>
+                            <div class="skills-subcontainer-details">
+                                <p>- Used Unity legacy tools and Pro Builder plugin to make levels.</p>
+                                <p>- I usually apply a modular design to my workflows, scripts and prefabs to make the integrations and future changes as seamless as possible. This speeds up a lot the iterations</p>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="skills-subcontainer-entry">
-                        <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                            <span class="skills-subcontainer-title-title">Fake Bank System</span>
-                            <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
-                        </a>
-                        <div class="skills-subcontainer-details">
-                            <p>- I made a website that reproduce a bank system using HTML, CSS, JS, PHP and a SQL Database.</p>
-                            <p>- The system included accounts linked to a Microsoft Account, money balance, stocks, transactions and more such as buy & sell features.</p>
+                        
+                        <div class="skills-subcontainer-entry">
+                            <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
+                                <span class="skills-subcontainer-title-title">UI progamming with UX design</span>
+                                <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                            </a>
+                            <div class="skills-subcontainer-details">
+                                <p>- I make my UI features, code, design and prefabs modular as much as needed (and possible) to fit the current needs and any future changes. This improves the iteration speed when adding/removing UI menus/elements.</p>
+                                <p>- Make all UI content decently readable so no users are lost in the menus and options.</p>
+                            </div>
                         </div>
+                        
+                        <div class="skills-subcontainer-entry">
+                            <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
+                                <span class="skills-subcontainer-title-title">AI progamming and design</span>
+                                <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                            </a>
+                            <div class="skills-subcontainer-details">
+                                <p>- AI modularity for seamless iterations</p>
+                                <p>- State machines with various behaviors</p>
+                            </div>
+                        </div>
+                        
                     </div>
-                    
+                    <div class="skills-subcontainer">
+                        <h2>Examples of systems I made</h2>
+                        
+                        <div class="skills-subcontainer-entry">
+                            <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
+                                <span class="skills-subcontainer-title-title">Procedural level generation</span>
+                                <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                            </a>
+                            <div class="skills-subcontainer-details">
+                                <p>- For a solo school project I chosed to make an Endless Runner in less than 3 months.</p>
+                                <p>- I made a CSV Reader to convert <a class="link-basic" href="https://docs.google.com/spreadsheets/d/1Km92vGee23Bw9NUooPjLF2fPezFmim9prriUAJhA5Ac/edit?usp=sharing" target="blank_">my google sheet</a> values into weighted lists. Those lists were used at runtime by the level generator to determine what elements to spawn, at what distance, interval, height, etc</p>
+                                <p>- This runtime level generator also handled background elements.</p>
+                                <p>- To properly debug the generation, I used in various way Unity's Gizmo draw methods. <a class="link-basic" href="https://imgur.com/a/WzqaORZ" target="_blank">See here</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-subcontainer-entry">
+                            <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
+                                <span class="skills-subcontainer-title-title">Complex input action system with root "motion" animations</span>
+                                <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                            </a>
+                            <div class="skills-subcontainer-details">
+                                <p>- This was also for the Endless Runner project. Since I was limited to the space bar, the goal was that depending on the player and level context, specific actions would occure when pressing/holding/releasing the space bar.</p>
+                                <p>- So instead of having X default actions (go left, go right, jump, slide) that can be done anytime, I wanted to only allow jumping and sliding, and the other actions would only be available at specific distances to the trap.</p>
+                                <p>- Since the player is constantly going forward, all the actions (Jumping, Sliding, Go Left, Go Right, Boost climing, Boost zipline, Vault) are using root "motion" animations, this means that the animation play rate and placement would be determined at runtime depending on the player position.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-subcontainer-entry">
+                            <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
+                                <span class="skills-subcontainer-title-title">Data driven AI system.</span>
+                                <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                            </a>
+                            <div class="skills-subcontainer-details">
+                                <p>- For a brawler (combat) school project, we needed various states for our AIs, and most of those states were determined by data, such as the cooldows, recovery time, etc (<a class="link-basic" href="https://imgur.com/a/29vJiIi" target="_blank">See here</a>)</p>
+                                <p>- Our AIs had 4 main states: </p>
+                                <p>   - Idle: The AI doesn't do anything (Before the AI would move around randomly before the player goes inside the arena, but because of our design choices we removed that))</p>
+                                <p>   - Attacking: The AI would track the player while they are in the arena (using AI Nav Agent), once the player close anough it charges its attack and does a specific amoutn of damage if the player is in the damage zone (Each AI had a different damage shape).</p>
+                                <p>   - Recovering: After the attack sequence, the AI recovers for a specific amount of time. If nothing happens to the AI, it will eventually go back in attack mode.</p>
+                                <p>   - Pushed: If the AI is attacked by the player and hit, it's "pushed", meaning the AI would play an animation and fall on the ground, making it vulnerable. If an AI is pushed on another (that isn't pushed) it will push it, creating a chain reaction.</p>
+                                <p>- All of those states are debuggable with a UI canvas and reflected with visual and sounds effect (player feedbacks).</p>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
         </div>
+        
+        <div class="text-single-container">
+            <div class="skills-container" id="Other">
+                <div>
+                    <h1>Other</h1>
+                </div>
+                <div class="skills-container-inner">
+                    <div class="skills-subcontainer">
+                        <h2>Skills</h2>
+                        
+                        <div class="skills-subcontainer-entry">
+                            <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
+                                <span class="skills-subcontainer-title-title">Web</span>
+                                <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                            </a>
+                            <div class="skills-subcontainer-details">
+                                <p>- Frontend: HTML, CSS, JavaScript</p>
+                                <p>- Backend: PHP, SQL</p>
+                                <p>- Other tools: Mermaid, XAMPP</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="skills-subcontainer">
+                        <h2>Examples</h2>
+                        
+                        <div class="skills-subcontainer-entry">
+                            <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
+                                <span class="skills-subcontainer-title-title">This website</span>
+                                <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                            </a>
+                            <div class="skills-subcontainer-details">
+                                <p>- This portfolio website was made by myself using HTML, CSS and JS. It's hosted using Github Pages free plan.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-subcontainer-entry">
+                            <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
+                                <span class="skills-subcontainer-title-title">Craft Viewer Tool</span>
+                                <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                            </a>
+                            <div class="skills-subcontainer-details">
+                                <p>- When working on a game project, I needed a way to visualize the ingredients dependencies of my items.</p>
+                                <p>- You can create resources, items and set ingredients for them.</p>
+                                <p>- You can then naviguate in a generated graph (using Mermaid) and see what ingredients an item needs with various level of details.</p>
+                                <p>- You can also move around in the graph and zoom in and out.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="skills-subcontainer-entry">
+                            <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
+                                <span class="skills-subcontainer-title-title">Fake Bank System</span>
+                                <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                            </a>
+                            <div class="skills-subcontainer-details">
+                                <p>- I made a website that reproduce a bank system using HTML, CSS, JS, PHP and a SQL Database.</p>
+                                <p>- The system included accounts linked to a Microsoft Account, money balance, stocks, transactions and more such as buy & sell features.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </div>
-    
-</div>
-<div id="footer"></div>
-<script>
-    EndFile();
-</script>
+    <div id="footer"></div>
+    <script>
+        EndFile();
+    </script>
 </body>
 </html>
