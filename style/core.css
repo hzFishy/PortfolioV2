@@ -905,12 +905,33 @@ p
 
 #gobackup
 {
-    background-color: red;
-    height: 30px;
-    width: 30px;
+    background-color: var(--hz-black-hard);
+    height: 40px;
+    width: 40px;
     
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 1;
+    
+    transition-duration: 0.5s;
+
+    @media (width > 1300px)
+    {
+        display: block;
+    }
+    @media (width <= 1300px)
+    {
+        display: none;
+    }
+}
+
+#gobackup img
+{
+    height: 100%;
+}
+
+#gobackup:hover
+{
+    filter: drop-shadow(0 0 5px white);
 }
