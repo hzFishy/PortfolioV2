@@ -135,17 +135,17 @@
                                 <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
                             </a>
                             <div class="skills-subcontainer-details">
-                                <p>//// Focus system</p>
+                                <p class="title">> Focus system</p>
                                 <p>   - If a player looks a usable item and is close enough they will see an interactive UI.</p>
                                 <p>   - The UI displays the required action (press, hold) as well as the key (dynamicly fetched from the player input settings).</p>
                                 <p>   - The UI is different depending on external data (if required).</p>
 
                                 <p> </p>
-                                <p>//// Use system</p>
+                                <p class="title">> Use system</p>
                                 <p>   - Use press and hold.</p>
                                 
                                 <p> </p>
-                                <p>//// Carry system</p>
+                                <p class="title">> Carry system</p>
                                 <p>   - Pick up item from source.</p>
                                 <p>   - Move around with item.</p>
                                 <p>   - Place item to target (with customizable rules).</p>
@@ -159,7 +159,7 @@
                                 <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
                             </a>
                             <div class="skills-subcontainer-details">
-                                <p>//// Inventory system</p>
+                                <p class="title">> Inventory system</p>
                                 <p>   - Each inventory component is initialized using a Primary Data Asset. This asset defines the max slot amount and what items are added by default.</p>
                                 <p>   - Each inventory component owned a GameplayTag Container, allowing custom behaviors depending on possessed items and more</p>
                                 <p>   - Many features such as Add (and Pickup), Remove (and Drop), Move, Swap, Rearrange if slot/inventory full.</p>
@@ -167,13 +167,13 @@
                                 <p>   - Hotbar system, the player can freely assign any equipable item that they own to the hotbar. The player can scroll to select the item they want and use it.</p>
     
                                 <p> </p>
-                                <p>//// Equipment system</p>
+                                <p class="title">> Equipment system</p>
                                 <p>   - Predefined equipment slots (head, body, ...)</p>
                                 <p>   - Many features such as Add (and Pickup), Remove (and Drop), Move, Swap with slot type filtering.</p>
                                 <p>   - Depending on equipped/unequipped equipment items various Gameplay Effects are added/removed to the owning player.</p>
                                 
                                 <p> </p>
-                                <p>//// Item system</p>
+                                <p class="title">> Item system</p>
                                 <p>   - The items are shared between the inventory system, equipment system and other systems.</p>
                                 <p>   - For the items definition, I used Data Assets to be able to easily async load them at runtime</p>
                                 <p>   - For the items behaviors at runtime, I used instanced structs with Gameplay Abilities and Gameplay Effects (On Use, On Hold, On Equipped, ...)</p>
@@ -194,23 +194,28 @@
 
                         <div class="skills-subcontainer-entry">
                             <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                                <span class="skills-subcontainer-title-title">xxxxx</span>
+                                <span class="skills-subcontainer-title-title">Multiplayer machine system</span>
                                 <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
                             </a>
                             <div class="skills-subcontainer-details">
-                                <p>- xxx.</p>
-                                <p>- xxx.</p>
+                                <p>- Machine system inspired by Satisfactory..</p>
+                                <p>- Source machines: burners (burns fuel to make electricity).</p>
+                                <p>- Target machines: constructors (consumes electricity to craft selected item receipt).</p>
+                                <p>- Electric poles and cables (to connect machines).</p>
+                                <p>- Each machine can hold 1 to 2 inventories (input and output). The player can interact with the machine to set its behavior/use the inventories.</p>
                             </div>
                         </div>
 
                         <div class="skills-subcontainer-entry">
                             <a class="skills-subcontainer-title" onclick="OnSkillsDetailsClick(this, event)">
-                                <span class="skills-subcontainer-title-title">xxxxx</span>
+                                <span class="skills-subcontainer-title-title">Miscs systems</span>
                                 <span class="skills-subcontainer-title-button"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
                             </a>
                             <div class="skills-subcontainer-details">
-                                <p>- xxx.</p>
-                                <p>- xxx.</p>
+                                <p><span class="title">- Multiplayer endless runner:</span> Dynamicly spawn level instances while the player are running forward.</p>
+                                <p><span class="title">- Multiplayer world time system:</span> Server authority time with client prediction. Various actors and other systems would bind to it to trigger various events at specific days, hours or minutes count.</p>
+                                <p><span class="title">- Multiplayer routine system:</span> Inspired from The Escapist, the routine system is a list of tasks assigned to all prisoners, each task has a time frame to complete it and a optional location to go to. Some special routines such as the job one required extra actions to compelte it.</p>
+                                <p><span class="title">- Multiplayer job system:</span> Inspired from The Escapist, the job system allows custom job types, coupled with interactions. For example: "Carry those 3 boxes from here to there".</p>
                             </div>
                         </div>
 
