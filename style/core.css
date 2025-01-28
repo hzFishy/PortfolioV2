@@ -817,6 +817,11 @@ p
     color: white;
 }
 
+.skills-subcontainer-details p .link-basic
+{
+    margin-left: 30px;
+}
+
 .generic-button-container
 {
     display: flex;
