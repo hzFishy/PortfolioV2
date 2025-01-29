@@ -26,6 +26,7 @@
 <div id="top-header-background" style="background-image: linear-gradient(#0000004a, #222), url('https://portfoliov2.hzfishy.fr/data/img/KcptsBackground_low.png')">    </div>
 <div id="header"></div>
 <div id="main-container">
+    
     <div id="gobackup">
         <a onclick="GoBackUp()">
             <img src="https://portfoliov2.hzfishy.fr/data/icons/ggle_arrow_up.svg" alt="Go up">
@@ -34,12 +35,18 @@
 
     <div class="center-screen">
         <div class="text-single-container-blur">
-            <div class="text-single-container">
+            <div class="text-single-container project-titles-outercontainer">
                 <h1>My projects</h1>
                 <div class="text-single-container">
                     <p>Here you can find the various projects I worked on.</p>
                     <div class="generic-button-container">
-                        <a class="generic-button" href="#UnrealEngine">Unreal Engine projects</a>
+                        <div class="project-titles-container">
+                            <a class="generic-button" href="#UnrealEngine">Unreal Engine projects</a>
+                            <div class="project-titles-container-list">
+                                <a class="generic-button" href="#Kctps">Kcpts</a>
+                                <a class="generic-button" href="#PrisonGame">Prison Game</a>
+                            </div>
+                        </div>
                         <a class="generic-button" href="#Unity">Unity projects</a>
                         <a class="generic-button" href="#Other">Other projects</a>
                     </div>
@@ -49,6 +56,29 @@
     </div>
 
     <div class="header-background-spacer"></div>
+    
+    <div class="text-single-container">
+        <div class="project-type-container" id="UnrealEngine">
+            <div class="project-type-title">
+                <h1>Unreal Engine projects</h1>
+            </div>
+            
+            <div class="project-container" id="Kctps">
+                <h1>KCPTS</h1>
+                <div class="project-container-content">
+                    <p>Description</p>
+                </div>
+            </div>
+
+            <div class="project-container" id="PrisonGame">
+                <h1>Prison Game</h1>
+                <div class="project-container-content">
+                    <p>Description</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
 
 </div>
 <div id="footer"></div>
