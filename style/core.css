@@ -827,7 +827,8 @@ p
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
+    align-content: flex-start;
     justify-content: center;
     margin-top: 20px;
 }
@@ -952,26 +953,63 @@ p
 
 .project-titles-container
 {
-    
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .project-titles-container-list
 {
-    transition-duration: 0.1s;
-    margin-top: 20px;
-    //opacity: 0;
+    transition-duration: 0.5s;
+    opacity: 0;
     max-height: 0;
-    max-width: 0;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    
+    @media (width > 1300px)
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    @media (width <= 1300px)
+    {
+        display: none;
+    }
 }
 
 .project-titles-outercontainer:hover .project-titles-container-list
 {
-    //opacity: 1;
-    max-height: 999px;
-    max-width: 999px;
+    @media (width > 1300px)
+    {
+        margin-top: 20px;
+        opacity: 1;
+        max-height: 999px;
+    }
+    @media (width <= 1300px)
+    {
+        display: none;
+    }
+   
+}
+
+.project-titles-outercontainer .project-titles-container-list .generic-button
+{
+    visibility: collapse;
+}
+
+.project-titles-outercontainer:hover .generic-button
+{
+    @media (width > 1300px)
+    {
+        visibility: visible;
+    }
+    @media (width <= 1300px)
+    {
+       
+    }
 }
 
 .project-titles-container-list .generic-button
@@ -994,6 +1032,7 @@ p
     border-width: 2px;
     border-color: rgba(255, 255, 255, 0.26);
 
+    max-width: 1300px;
     @media (width > 1300px)
     {
         margin-left: auto;
@@ -1010,6 +1049,7 @@ p
 {
     border-top-color: rgba(255, 255, 255, 0.8);
     border-bottom-color: rgba(255, 255, 255, 0.8);
+    max-width: 1250px;
 }
 
 .project-type-container .project-type-title
@@ -1025,7 +1065,7 @@ p
     border-style: solid;
     border-radius: 20px;
     border-width: 2px;
-    border-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.0);
     
     border-bottom-color: rgba(255, 255, 255, 0);
 }
