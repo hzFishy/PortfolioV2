@@ -105,3 +105,20 @@ function GoBackUp()
     window.location.href='#top-header-background';
     window.location.hash = '';
 }
+
+function OnProjectDetailsClick(element, event)
+{
+    var details = $(element).parent().parent().parent()[0];
+    //console.log(details);
+    if (details.classList.contains("hz-active"))
+    {
+        details.classList.remove("hz-active");
+        $(element).find($("img")).attr('src','/data/icons/ggle_unfold.svg');
+    }
+    else
+    {
+        //console.log($(element).find($("img")));
+        details.classList.add("hz-active");
+        $(element).find($("img")).attr('src','/data/icons/ggle_fold.svg');
+    }
+}

@@ -674,8 +674,8 @@ p
 {
     cursor: pointer;
     padding-left: 10px;
-    align-items: center;
     margin-bottom: 0.5px;
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between
@@ -1015,12 +1015,13 @@ p
 .project-titles-container-list .generic-button
 {
     border-color: var(--hz-red-soft);
-    color: white;
+    color: var(--hz-red-soft);
 }
 
 .project-titles-container-list .generic-button:hover
 {
     box-shadow: 0px 0px 18px 0px rgba(255, 45, 63, 0.9);
+    color: white;
 }
 
 .project-type-container
@@ -1047,9 +1048,8 @@ p
 
 .project-type-container:hover
 {
-    border-top-color: rgba(255, 255, 255, 0.8);
-    border-bottom-color: rgba(255, 255, 255, 0.8);
-    max-width: 1250px;
+    border-color: rgba(255, 255, 255, 0.8);
+    max-width: 1275px;
 }
 
 .project-type-container .project-type-title
@@ -1066,14 +1066,12 @@ p
     border-radius: 20px;
     border-width: 2px;
     border-color: rgba(255, 255, 255, 0.0);
-    
-    border-bottom-color: rgba(255, 255, 255, 0);
 }
 
 .project-type-container:hover .project-type-title
 {
     border-color: rgba(255, 255, 255, 0.8);
-    border-bottom-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
     
     transform: translateY(-10px);
 }
@@ -1116,7 +1114,6 @@ p
 .project-container:hover
 {
     border-color: var(--hz-red-hard);
-//background-color: #200000;
     transform: translateY(-5px);
 }
 
@@ -1128,8 +1125,99 @@ p
 
 .project-container-content
 {
-    text-align: center;
+    text-align: center;    
+}
+
+.project-container-content-title
+{
+    
+}
+
+.project-container-content-details
+{
+    transition-duration: 0.5s;
+    
+    border-radius: 10px;
+    border-color: white;
+    border-width: 2px;
+    border-style: double;
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.project-container-content-details-button
+{
+    text-decoration: none;
+    
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    align-items: center;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.project-container.hz-active .project-container-content-details-button
+{
+    border-bottom-color: white;
+    border-bottom-width: 2px;
+    border-bottom-style: double;
+}
+
+
+.project-container-content-details-button-title
+{
+    font-size: 18px;
+    color: white;
+}
+
+.project-container-content-details-button-image
+{
+    cursor: pointer;
+    background: #2d2d2d;
+    border-radius: 15px;
+    padding: 5px 5px 5px 5px;
+    margin-left: 5px;
+    transition-duration: 0.5s;
+    box-sizing: border-box;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.project-container-content-details-button-image img
+{
+    cursor: pointer;
+    max-height: 20px;
+}
+
+.project-container-content-details-button-image:hover
+{
+    background: #3e3e3e;
+    filter: drop-shadow(0 0 5px white);
+}
+
+.project-container-content-inner
+{
+    transition-duration: 0.5s;
+
+    max-height: 0;
+    opacity: 0;
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.project-container.hz-active .project-container-content-inner
+{
+    transition-duration: 0.15s;
+    
+    max-height: 1500px;
+    opacity: 1;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
