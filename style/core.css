@@ -1106,9 +1106,9 @@ p
     background-color: var(--hz-skills-transbg);
     box-shadow: 0px 2px 5px 5px rgba(255, 0, 0, 0.2);
     padding-top: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
     padding-bottom: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .project-container:hover
@@ -1137,18 +1137,33 @@ p
 {
     transition-duration: 0.5s;
     
+    background-color: var(--hz-black-hard);
     border-radius: 10px;
     border-color: white;
-    border-width: 2px;
+    border-width: 4px;
     border-style: double;
 
     margin-left: 20px;
     margin-right: 20px;
 }
 
+.project-container:not(.hz-active) .project-container-content-details:hover
+{
+    border-color: var(--hz-red-soft);
+}
+
+.project-container.hz-active .project-container-content-details
+{
+    color: white;
+    border-color: var(--hz-red-soft);
+    background-color: rgba(255, 255, 255, 0);
+}
+
 .project-container-content-details-button
 {
+    transition-duration: 0.5s;
     text-decoration: none;
+    cursor: pointer;
     
     padding-left: 20px;
     padding-right: 20px;
@@ -1161,9 +1176,15 @@ p
     justify-content: space-between
 }
 
+.project-container:not(.hz-active) .project-container-content-details-button:hover
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 .project-container.hz-active .project-container-content-details-button
 {
-    border-bottom-color: white;
+    border-bottom-color: var(--hz-red-soft);
     border-bottom-width: 2px;
     border-bottom-style: double;
 }
@@ -1173,6 +1194,13 @@ p
 {
     font-size: 18px;
     color: white;
+    transition-duration: 0.5s;
+}
+
+.project-container-content-details:hover .project-container-content-details-button-title:before, .project-container.hz-active .project-container-content-details-button-title:before
+{
+    transition-duration: 0.5s;
+    content: ">> ";
 }
 
 .project-container-content-details-button-image
@@ -1202,8 +1230,12 @@ p
 
 .project-container-content-inner
 {
-    transition-duration: 0.5s;
+    transition-duration: 0.1s;
 
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    
     max-height: 0;
     opacity: 0;
 
@@ -1211,13 +1243,23 @@ p
     margin-bottom: 0px;
 }
 
+.project-container-content-inner p
+{
+    max-height: 0;
+}
+
 .project-container.hz-active .project-container-content-inner
 {
-    transition-duration: 0.15s;
+    transition-duration: 0.5s;
     
     max-height: 1500px;
     opacity: 1;
 
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.project-container.hz-active .project-container-content-inner p
+{
+    max-height: 999px;
 }
