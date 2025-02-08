@@ -989,7 +989,7 @@ p
 {
     @media (width > 800px)
     {
-        margin-top: 20px;
+        margin-top: 5px;
         opacity: 1;
         max-height: 999px;
     }
@@ -1021,6 +1021,8 @@ p
 {
     border-color: var(--hz-red-soft);
     color: var(--hz-red-soft);
+    
+    margin-bottom: 5px;
 }
 
 .project-titles-container-list .generic-button:hover
@@ -1376,4 +1378,14 @@ p
     padding-right: 7px;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.project-span
+{
+    color: white;
+}
+
+.project-span a
+{
+    color: var(--hz-cyan-default);
 }
