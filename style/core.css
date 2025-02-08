@@ -1187,7 +1187,7 @@ p
     
     background-color: #1b1b1b;
     border-radius: 10px;
-    border-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0.2);
     border-width: 4px;
     border-style: double;
 
@@ -1320,4 +1320,60 @@ p
 .project-container.hz-active .project-container-content-inner p
 {
     max-height: 999px;
+}
+
+
+.project-container-content-media
+{
+    background-color: #1b1b1b;
+    border-radius: 10px;
+    border-color: rgba(255, 255, 255, 0.2);
+    border-width: 4px;
+    border-style: double;
+
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition-duration: 0.5s;
+}
+
+.project-container-content-media:hover
+{
+    border-color: var(--hz-projects-moredetailsbtn-border)
+}
+
+.project-container-content-media-title
+{
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+
+.project-container-content-media-list
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-container-content-media-list .generic-button
+{
+    background-color: var(--hz-black-hard);
+    border-color: var(--hz-red-soft);
+    color: white;
+}
+
+.project-container-content-media-list .generic-button:hover
+{
+    box-shadow: 0px 0px 18px 0px rgba(255, 135, 148, 0.9);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
