@@ -1102,7 +1102,7 @@ p
 
 .project-container#SubLikeGame
 {
-    background-position: 0 0, 50% 10%;
+    background-position: 0 0, 50% 20%;
     background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/SubLikeGameBackground1.png");
 }
 
@@ -1132,9 +1132,8 @@ p
 
 .project-container
 {
-    //background-position: 0 0, 50%;
     background-repeat: repeat, no-repeat;
-    //background-size: auto, cover;
+    background-size: auto, cover;
     
     transition-duration: 0.5s;
     scroll-margin-top: 100px;
