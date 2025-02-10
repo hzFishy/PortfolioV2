@@ -26,6 +26,8 @@
     
     --hz-projects-background-trans-container: rgb(0 0 0 / 70%);
     --hz-projects-background-trans-single: rgb(27, 27, 27);
+    
+    --hz-projects-background-trans-container-kcpts: rgb(0, 0, 0, 0.47);
 
     --hz-black-bodybackground: #222;
     
@@ -1094,28 +1096,45 @@ p
 
 .project-container#Kctps
 {
-    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/KcptsBackground_low.png");
+    background-position: 0 0, 50% 60%;
+    background-image: linear-gradient(var(--hz-projects-background-trans-container-kcpts), var(--hz-projects-background-trans-container-kcpts)), url("https://portfoliov2.hzfishy.fr/data/img/KcptsBackground_low.png");
+}
+
+.project-container#EndlessRunner
+{
+    background-position: 0 0, 50% 10%;
+    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/PushEmAllBackground.png");
+}
+
+.project-container#SubLikeGame
+{
+    background-position: 0 0, 50% 10%;
+    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/PushEmAllBackground.png");
 }
 
 .project-container#PrisonGame
 {
+    background-position: 0 0, 50% 10%;
     background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/PushEmAllBackground.png");
 }
 
 .project-container#PushEmAll
 {
+    background-position: 0 0, 50% 10%;
     background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/PushEmAllBackground.png");
 }
 
 .project-container#RunOrDie
 {
+    background-position: 0 0, 50% 40%;
     background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/RunOrDieBackground.png");
 }
 
 .project-container
 {
-    background-position: 0 0, 50% 10%;
-    background-size: auto, auto;
+    //background-position: 0 0, 50%;
+    background-repeat: repeat, no-repeat;
+    //background-size: auto, cover;
     
     transition-duration: 0.5s;
     scroll-margin-top: 100px;
