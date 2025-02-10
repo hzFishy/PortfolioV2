@@ -24,6 +24,9 @@
     --hz-red-hard: #ea3535;
     --hz-red-softer: #f76868;
     
+    --hz-projects-background-trans-container: rgb(0 0 0 / 70%);
+    --hz-projects-background-trans-single: rgb(27, 27, 27);
+
     --hz-black-bodybackground: #222;
     
     --hz-skills-transbg: rgba(30, 30, 30, 0.39);
@@ -1088,16 +1091,32 @@ p
     color: white;
 }
 
-.project-container#PushEmAll
+
+.project-container#Kctps
 {
-    background-image: linear-gradient(rgba(74, 74, 74, 0.16), rgba(74, 74, 74, 0.16)), url("https://portfoliov2.hzfishy.fr/data/img/PushEmAllBackground.png");
-    background-position: 0 0, 50% 10%;
-    background-size: auto, auto;
+    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/KcptsBackground_low.png");
 }
 
+.project-container#PrisonGame
+{
+    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/PushEmAllBackground.png");
+}
+
+.project-container#PushEmAll
+{
+    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/PushEmAllBackground.png");
+}
+
+.project-container#RunOrDie
+{
+    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/RunOrDieBackground.png");
+}
 
 .project-container
 {
+    background-position: 0 0, 50% 10%;
+    background-size: auto, auto;
+    
     transition-duration: 0.5s;
     scroll-margin-top: 100px;
 
@@ -1195,7 +1214,7 @@ p
 {
     transition-duration: 0.5s;
     
-    background-color: #1b1b1b;
+    background-color: var(--hz-projects-background-trans-single);
     border-radius: 10px;
     border-color: rgba(255, 255, 255, 0.2);
     border-width: 4px;
@@ -1215,7 +1234,7 @@ p
 {
     color: white;
     border-color: var(--hz-projects-moredetailsbtn-border);
-    background-color: rgba(255, 255, 255, 0);
+    background-color: var(--hz-projects-background-trans-single);
 }
 
 .project-container-content-details-button
@@ -1335,7 +1354,7 @@ p
 
 .project-container-content-media
 {
-    background-color: #1b1b1b;
+    background-color: var(--hz-projects-background-trans-single);
     border-radius: 10px;
     border-color: rgba(255, 255, 255, 0.2);
     border-width: 4px;
