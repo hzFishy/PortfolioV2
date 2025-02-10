@@ -1088,6 +1088,14 @@ p
     color: white;
 }
 
+.project-container#PushEmAll
+{
+    background-image: linear-gradient(rgba(74, 74, 74, 0.16), rgba(74, 74, 74, 0.16)), url("https://portfoliov2.hzfishy.fr/data/img/PushEmAllBackground.png");
+    background-position: 0 0, 50% 10%;
+    background-size: auto, auto;
+}
+
+
 .project-container
 {
     transition-duration: 0.5s;
@@ -1389,3 +1397,9 @@ p
 {
     color: var(--hz-cyan-default);
 }
+
+.project-separator
+{
+    margin-top: 120px;
+}
+
