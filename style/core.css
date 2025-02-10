@@ -25,7 +25,7 @@
     --hz-red-softer: #f76868;
     
     --hz-projects-background-trans-container: rgb(0 0 0 / 70%);
-    --hz-projects-background-trans-single: rgb(27, 27, 27);
+    --hz-projects-background-trans-single: rgba(27, 27, 27, 0.7);
     
     --hz-projects-background-trans-container-kcpts: rgb(0, 0, 0, 0.47);
 
@@ -1109,7 +1109,7 @@ p
 .project-container#PrisonGame
 {
     background-position: 0 0, 50% 10%;
-    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/PushEmAllBackground.png");
+    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/PrisonGameBackground1.png");
 }
 
 .project-container#Kctps
@@ -1121,7 +1121,7 @@ p
 .project-container#PushEmAll
 {
     background-position: 0 0, 50% 10%;
-    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/PushEmAllBackground.png");
+    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/PushEmAllBackground_crop.png");
 }
 
 .project-container#RunOrDie
@@ -1305,7 +1305,7 @@ p
 .project-container-content-details:hover .project-container-content-details-button-title:before, .project-container.hz-active .project-container-content-details-button-title:before
 {
     transition-duration: 0.5s;
-    content: ">> ";
+    //content: ">> ";
 }
 
 .project-container-content-details-button-image
