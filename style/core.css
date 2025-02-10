@@ -1103,7 +1103,7 @@ p
 .project-container#EndlessRunner
 {
     background-position: 0 0, 50% 10%;
-    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/PushEmAllBackground.png");
+    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/EndlessRunnerBackground1.png");
 }
 
 .project-container#SubLikeGame
