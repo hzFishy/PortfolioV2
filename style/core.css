@@ -1094,28 +1094,28 @@ p
 }
 
 
-.project-container#Kctps
-{
-    background-position: 0 0, 50% 60%;
-    background-image: linear-gradient(var(--hz-projects-background-trans-container-kcpts), var(--hz-projects-background-trans-container-kcpts)), url("https://portfoliov2.hzfishy.fr/data/img/KcptsBackground_low.png");
-}
-
 .project-container#EndlessRunner
 {
-    background-position: 0 0, 50% 10%;
+    background-position: 0 0, 50% 80%;
     background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/EndlessRunnerBackground1.png");
 }
 
 .project-container#SubLikeGame
 {
     background-position: 0 0, 50% 10%;
-    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/PushEmAllBackground.png");
+    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/SubLikeGameBackground1.png");
 }
 
 .project-container#PrisonGame
 {
     background-position: 0 0, 50% 10%;
     background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://portfoliov2.hzfishy.fr/data/img/PushEmAllBackground.png");
+}
+
+.project-container#Kctps
+{
+    background-position: 0 0, 50% 60%;
+    background-image: linear-gradient(var(--hz-projects-background-trans-container-kcpts), var(--hz-projects-background-trans-container-kcpts)), url("https://portfoliov2.hzfishy.fr/data/img/KcptsBackground_low.png");
 }
 
 .project-container#PushEmAll
