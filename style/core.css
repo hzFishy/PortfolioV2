@@ -990,7 +990,7 @@ p
     }
 }
 
-.project-titles-outercontainer:hover .project-titles-container-list
+.project-titles-outercontainer/*:hover*/ .project-titles-container-list
 {
     @media (width > 800px)
     {
@@ -1007,10 +1007,10 @@ p
 
 .project-titles-outercontainer .project-titles-container-list .generic-button
 {
-    visibility: collapse;
+    /*visibility: collapse;*/
 }
 
-.project-titles-outercontainer:hover .generic-button
+.project-titles-outercontainer/*:hover*/ .generic-button
 {
     @media (width > 800px)
     {
@@ -1137,7 +1137,7 @@ p
     
     transition-duration: 0.5s;
     scroll-margin-top: 100px;
-
+    
     @media (width > 1300px)
     {
         margin-left: auto;
