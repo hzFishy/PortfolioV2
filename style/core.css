@@ -293,6 +293,15 @@ p
 
 .hz-nav-item .icon
 {
+    @media (width > 1300px)
+    {
+        display: block;
+    }
+    @media (width <= 1300px)
+    {
+        display: none;
+    }
+    
     position: relative;
     top: -5px;
     left: 2px;
@@ -326,9 +335,17 @@ p
     text-shadow: 0 0 5px #c1877d;
     text-decoration: none;
     filter: drop-shadow(0 0 5px var(--hz-orange-dark));
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 5px;
+
+    @media (width > 1300px)
+    {
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px;
+    }
+    @media (width <= 1300px)
+    {
+        
+    }
 }
 
 .hz-nav-item.hz-active p
@@ -465,7 +482,6 @@ p
     text-align: center;
     display: block;
     margin: 5px;
-    
 }
 
 #hz-navbar-mobile-menu-container
@@ -542,7 +558,7 @@ p
 
 #email:hover
 {
-    color: #ffa6bb;
+    color: #ec587b;
 }
 
 
@@ -587,7 +603,7 @@ p
 {
     transition-duration: 0.5s;
     width: 140px;
-    background-color: var(--hz-gray-low-nottrans);
+    background-color: #e46c8a;
     color: #fff;
     text-align: center;
     border-radius: 6px;
@@ -596,7 +612,6 @@ p
     left: -50%;
     border-width: 3px;
     border-style: solid;
-    border-color: var(--hz-black-low) var(--hz-black-low) transparent transparent;
 }
 
 
@@ -623,7 +638,6 @@ p
 {
     background-color: var(--hz-green-success);
     border-width: 2px;
-    border-color: var(--hz-green-mid) var(--hz-green-mid) transparent transparent;
 }
 
 .skills-container
@@ -1006,12 +1020,16 @@ p
     
     margin-left: 20px;
     margin-right: 20px;
-    margin-bottom: 10px;
+
+    @media (width > 1300px)
+    {
+        margin-bottom: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 
     padding-left: 7px;
     padding-right: 7px;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 
 .project-titles-container-list
