@@ -681,6 +681,8 @@ p
 {
     text-align: center;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
 }
@@ -871,7 +873,8 @@ p
 
 .skills-subcontainer-entry.hz-active .skills-subcontainer-details p
 {
-    display: flex;
+    display: block;
+    //flex-direction: column;
     max-height: 500px;
     transition-duration: 0.5s;
 }
@@ -883,7 +886,8 @@ p
 
 .skills-subcontainer-details p .link-basic
 {
-    margin-left: 30px;
+
+    display: block;
 }
 
 .generic-button-container
@@ -1197,22 +1201,35 @@ p
     background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://hzfishy.fr/data/img/RunOrDieBackground.png");
 }
 
-.project-container#CraftViewer
+.project-container#ThisPortfolio
 {
-    background-position: 0 0, 50% 40%;
-    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://hzfishy.fr/data/img/CraftViewerBackground2.png");
+    background-position: 0 0, 50% 20%;
+    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://hzfishy.fr/data/img/Logo4000_low.jpg");
 }
 
-.project-container#Bankling
+.project-container#CraftViewer
 {
-    background-position: 0 0, 50% 40%;
-    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://hzfishy.fr/data/img/BanklingBackground.png");
+    background-position: 0 0, 50% 20%;
+    background-image: linear-gradient(var(--hz-projects-background-trans-container-soft), var(--hz-projects-background-trans-container-soft)), url("https://hzfishy.fr/data/img/CraftViewerBackground2.png");
 }
 
 .project-container#StructureCCloner
 {
     background-position: 0 0, 50% 40%;
     background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://hzfishy.fr/data/img/StructureCClonerBackground.png");
+}
+
+.project-container#Bankling
+{
+    background-position: 0 0, 50% 40%;
+    background-image: linear-gradient(var(--hz-projects-background-trans-container-soft), var(--hz-projects-background-trans-container-soft)), url("https://hzfishy.fr/data/img/BanklingBackground.png");
+}
+
+
+.project-container#Valorant
+{
+    background-position: 0 0, 50% 40%;
+    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://hzfishy.fr/data/img/ValorantBackground1.png");
 }
 
 
@@ -1482,6 +1499,7 @@ p
     border-bottom-color: rgba(255, 255, 255, 0.2);
     border-bottom-style: solid;
     border-bottom-width: 2px;
+    margin-bottom: 0;
 }
 
 .project-container-content-media-list
@@ -1499,6 +1517,7 @@ p
     background-color: var(--hz-black-hard);
     border-color: var(--hz-red-soft);
     color: white;
+    margin-top: 10px;
 }
 
 .project-container-content-media-list .generic-button:hover

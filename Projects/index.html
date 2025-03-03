@@ -43,6 +43,7 @@
                     <div class="generic-button-container">
                         <div class="project-titles-container">
                             <a class="generic-button" href="#UnrealEngine">Unreal Engine projects</a>
+                            <!--
                             <div class="project-titles-container-list">
                                 <a class="generic-button" href="#ToothForCash">Tooth For Cash</a>
                                 <a class="generic-button" href="#EndlessRunner">EndlessRunner*</a>
@@ -50,13 +51,16 @@
                                 <a class="generic-button" href="#PrisonGame">PrisonGame*</a>
                                 <a class="generic-button" href="#Kctps">Kcpts</a>
                             </div>
+                            -->
                         </div>
                         <div class="project-titles-container">
                             <a class="generic-button" href="#Unity">Unity projects</a>
+                            <!--
                             <div class="project-titles-container-list">
                                 <a class="generic-button" href="#PushEmAll">Push'Em All</a>
                                 <a class="generic-button" href="#RunOrDie">Run Or Die</a>
                             </div>
+                            -->
                         </div>
                         <div class="project-titles-container">
                             <a class="generic-button" href="#Other">Other projects</a>
@@ -78,7 +82,6 @@
             <div class="project-type-title">
                 <h1>Unreal Engine projects</h1>
             </div>
-
             
             <div class="project-container" id="ToothForCash">
                 <h1>Tooth For Cash</h1>
@@ -348,6 +351,35 @@
                 <h1>Other projects</h1>
             </div>
 
+
+            <div class="project-container" id="ThisPortfolio">
+                <h1>This website</h1>
+                <div class="project-container-content">
+                    <div class="project-container-content-summary">
+                        <p><b>Solo personal project | Jan 2025</b> (on going)</p>
+                    </div>
+                   
+                    <div class="project-container-content-details">
+                        <a class="project-container-content-details-button" onclick="OnProjectDetailsClick(this, event)">
+                            <span class="project-container-content-details-button-title">More details</span>
+                            <span class="project-container-content-details-button-image"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                        </a>
+                        <div class="project-container-content-inner">
+                            <p>- This portfolio website was made by myself using HTML, CSS and JS.</p>
+                            <p>- It's hosted using Github Pages free plan.</p>
+                        </div>
+                    </div>
+                    <div class="project-container-content-media">
+                        <p class="project-container-content-media-title">Media</p>
+                        <div class="project-container-content-media-list">
+                            <a class="generic-button" href="https://github.com/hzFishy/StructureCCloner" target="_blank">Github Repository</a>
+                            <a class="generic-button" href="https://www.youtube.com/watch?v=phckjnINGek" target="_blank">Trailer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="project-container" id="CraftViewer">
                 <h1>CraftViewer*</h1>
                 <div class="project-container-content">
@@ -366,12 +398,10 @@
                             <span class="project-container-content-details-button-image"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
                         </a>
                         <div class="project-container-content-inner">
-                            <p>
-                                When working on a game project, I needed a way to visualize the ingredients dependencies of my items.
-                                In this currently WIP website, you can create ressources, items and set ingredients for them.
-                                You can then naviguate in a generated graph (using Mermaid) and see what ingredients a item needs.
-                            </p>
-                            <p> === WIP ===</p>
+                            <p>- When working on a game project, I needed a way to visualize the ingredients dependencies of my items.</p>
+                            <p>- You can create resources, items and set ingredients for them.</p>
+                            <p>- You can then naviguate in a generated graph (using Mermaid) and see what ingredients an item needs with various level of details.</p>
+                            <p>- You can also move around in the graph and zoom in and out.</p>
                         </div>
                     </div>
                     <div class="project-container-content-media">
@@ -382,42 +412,7 @@
                     </div>
                 </div>
             </div>
-
             
-            <div class="project-container" id="Bankling">
-                <h1>Bankling</h1>
-                <div class="project-container-content">
-                    <div class="project-container-content-summary">
-                        <p><b>Freelance project | Summer 2024</b> (2m)</p>
-                    </div>
-                    <div class="project-container-content-title-keypoints">
-                        <div class="project-container-content-title-keypoints-inner">
-                            <p class="project-container-content-title"><b>Key points</b></p>
-                            <p>- PHP with SQL backend.</p>
-                        </div>
-                    </div>
-                    <div class="project-container-content-details">
-                        <a class="project-container-content-details-button" onclick="OnProjectDetailsClick(this, event)">
-                            <span class="project-container-content-details-button-title">More details</span>
-                            <span class="project-container-content-details-button-image"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
-                        </a>
-                        <div class="project-container-content-inner">
-                            <p>
-                                I made a website that reproduce a bank system using html, css, js, php and a SQL Database.
-                                This system is also linked to a lua computer program inside the ComputerCraft : Tweaked Minecraft mod.
-                            </p>
-                            <p> === WIP ===</p>
-                        </div>
-                    </div>
-                    <div class="project-container-content-media">
-                        <p class="project-container-content-media-title">Media</p>
-                        <div class="project-container-content-media-list">
-                            <p>Private project</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             
             <div class="project-container" id="StructureCCloner">
                 <h1>StructureCCloner</h1>
@@ -451,6 +446,73 @@
                     </div>
                 </div>
             </div>
+
+            
+            <div class="project-container" id="Bankling">
+                <h1>Bankling</h1>
+                <div class="project-container-content">
+                    <div class="project-container-content-summary">
+                        <p><b>Freelance project | Summer 2023</b> (2m)</p>
+                    </div>
+                    <div class="project-container-content-title-keypoints">
+                        <div class="project-container-content-title-keypoints-inner">
+                            <p class="project-container-content-title"><b>Key points</b></p>
+                            <p>- PHP with SQL backend.</p>
+                            <p>- Microsoft login.</p>
+                        </div>
+                    </div>
+                    <div class="project-container-content-details">
+                        <a class="project-container-content-details-button" onclick="OnProjectDetailsClick(this, event)">
+                            <span class="project-container-content-details-button-title">More details</span>
+                            <span class="project-container-content-details-button-image"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                        </a>
+                        <div class="project-container-content-inner">
+                            <p>
+                                I made a website that reproduce a bank system using html, css, js, php and a SQL Database.
+                                This system is also linked to a lua computer program inside the ComputerCraft : Tweaked Minecraft mod.
+                            </p>
+                            <p>
+                                The system included accounts linked to a Microsoft Account, money balance, stocks, transactions and more such as buy & sell features.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="project-container-content-media">
+                        <p class="project-container-content-media-title">Media</p>
+                        <div class="project-container-content-media-list">
+                            <p>Private project</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="project-container" id="Valorant">
+                <h1>Valorant montages</h1>
+                <div class="project-container-content">
+                    <div class="project-container-content-summary">
+                        <p><b>Solo personal projects | Jan 2025</b></p>
+                    </div>
+
+                    <div class="project-container-content-details">
+                        <a class="project-container-content-details-button" onclick="OnProjectDetailsClick(this, event)">
+                            <span class="project-container-content-details-button-title">More details</span>
+                            <span class="project-container-content-details-button-image"><img src="/data/icons/ggle_unfold.svg" alt="Unfold"></span>
+                        </a>
+                        <div class="project-container-content-inner">
+                            <p>- My valorant montages made me learn After Effects by syncing my effects on the music with my raw footage. (<a class="link-basic" href="https://www.youtube.com/playlist?list=PLPLp-Eo63CH7XmhfzxXnpq-gkJNOcOoUX" target="_blank">Valorant playlist</a>).</p>
+                        </div>
+                    </div>
+                    <div class="project-container-content-media">
+                        <p class="project-container-content-media-title">Media</p>
+                        <div class="project-container-content-media-list">
+                            <a class="generic-button" href="https://github.com/hzFishy/StructureCCloner" target="_blank">Github Repository</a>
+                            <a class="generic-button" href="https://www.youtube.com/watch?v=phckjnINGek" target="_blank">Trailer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
 
         </div>
     </div>
