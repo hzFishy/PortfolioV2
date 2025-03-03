@@ -698,6 +698,16 @@ p
     margin-bottom: 20px;
 }
 
+.skills-subcontainer .skills-subcontainer-small
+{
+    color: #e1e1e1;
+    font-size: 15px;
+}
+.skills-subcontainer .skills-subcontainer-small .link-basic
+{
+    font-size: 15px;
+}
+
 .skills-subcontainer h1
 {
     padding-bottom: 7px;
@@ -836,7 +846,8 @@ p
     margin: 0;
     transition-duration: 0.1s;
     margin-right: 10px;
-
+    
+    
     color: #dd9f9f;
     padding-left: 10px;
     white-space: pre-wrap;
@@ -846,6 +857,12 @@ p
     text-indent: -30px;
     margin-left: 30px;
     margin-bottom: 5px;
+}
+
+.skills-subcontainer-details p .link-basic
+{
+    margin-left: 30px;
+    display: inline-block;
 }
 
 .skills-subcontainer-title-title
@@ -882,12 +899,6 @@ p
 .skills-subcontainer-details .title
 {
     color: white;
-}
-
-.skills-subcontainer-details p .link-basic
-{
-
-    display: block;
 }
 
 .generic-button-container
