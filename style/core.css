@@ -830,8 +830,8 @@ p
 {
     list-style-type: none;
     max-width: 800px;
-
-    max-height: 0;
+    
+    display: none;
     margin: 0;
     transition-duration: 0.1s;
     margin-right: 10px;
@@ -856,6 +856,7 @@ p
 
 .skills-subcontainer-details
 {
+    display: flex;
     transition-duration: 0.1s;
     max-height: 0;
     opacity: 0;
@@ -865,11 +866,13 @@ p
 {
     max-height: 1500px;
     opacity: 1;
+    display: block;
     transition-duration: 0.5s;
 }
 
 .skills-subcontainer-entry.hz-active .skills-subcontainer-details p
 {
+    display: flex;
     max-height: 500px;
     transition-duration: 0.5s;
 }
@@ -1152,6 +1155,12 @@ p
     color: white;
 }
 
+
+.project-container#EndlessRunner
+{
+    background-position: 0 0, 50% 80%;
+    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://hzfishy.fr/data/img/ToothForCashBackground.png");
+}
 
 .project-container#EndlessRunner
 {
