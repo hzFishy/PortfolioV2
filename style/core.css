@@ -28,10 +28,9 @@
     --hz-red-softer: #f76868;
     
     --hz-projects-background-trans-container: rgb(0 0 0 / 70%);
+    --hz-projects-background-trans-container-soft: rgb(0 0 0 / 50%);
     --hz-projects-background-trans-single: rgba(27, 27, 27, 0.7);
     
-    --hz-projects-background-trans-container-kcpts: rgb(0, 0, 0, 0.47);
-
     --hz-black-bodybackground: #222;
     
     --hz-skills-transbg: rgba(30, 30, 30, 0.39);
@@ -1156,16 +1155,16 @@ p
 }
 
 
-.project-container#EndlessRunner
+.project-container#ToothForCash
 {
     background-position: 0 0, 50% 80%;
-    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://hzfishy.fr/data/img/ToothForCashBackground.png");
+    background-image: linear-gradient(var(--hz-projects-background-trans-container-soft), var(--hz-projects-background-trans-container-soft)), url("https://hzfishy.fr/data/img/ToothForCashBackground.png");
 }
 
 .project-container#EndlessRunner
 {
     background-position: 0 0, 50% 80%;
-    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://hzfishy.fr/data/img/EndlessRunnerBackground1.png");
+    background-image: linear-gradient(var(--hz-projects-background-trans-container-soft), var(--hz-projects-background-trans-container-soft)), url("https://hzfishy.fr/data/img/EndlessRunnerBackground1.png");
 }
 
 .project-container#SubLikeGame
@@ -1183,7 +1182,7 @@ p
 .project-container#Kctps
 {
     background-position: 0 0, 50% 60%;
-    background-image: linear-gradient(var(--hz-projects-background-trans-container-kcpts), var(--hz-projects-background-trans-container-kcpts)), url("https://hzfishy.fr/data/img/KcptsBackground_low.png");
+    background-image: linear-gradient(var(--hz-projects-background-trans-container-soft), var(--hz-projects-background-trans-container-soft)), url("https://hzfishy.fr/data/img/KcptsBackground_low.png");
 }
 
 .project-container#PushEmAll
@@ -1196,6 +1195,12 @@ p
 {
     background-position: 0 0, 50% 40%;
     background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://hzfishy.fr/data/img/RunOrDieBackground.png");
+}
+
+.project-container#CraftViewer
+{
+    background-position: 0 0, 50% 40%;
+    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://hzfishy.fr/data/img/CraftViewerBackground.png");
 }
 
 .project-container
@@ -1418,6 +1423,7 @@ p
 
 .project-container-content-inner p
 {
+    display: none;
     max-height: 0;
 }
 
@@ -1434,6 +1440,7 @@ p
 
 .project-container.hz-active .project-container-content-inner p
 {
+    display: block;
     max-height: 999px;
 }
 
