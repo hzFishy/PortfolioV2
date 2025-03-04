@@ -1114,6 +1114,7 @@ p
 
 .project-type-container
 {
+    scroll-margin-top: 100px;
     transition-duration: 0.8s;
     
     //border-style: solid;
