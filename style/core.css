@@ -1275,6 +1275,12 @@ img, svg
     background-image: linear-gradient(var(--hz-projects-background-trans-container-soft), var(--hz-projects-background-trans-container-soft)), url("https://hzfishy.fr/data/img/CraftViewerBackground2.png");
 }
 
+.project-container#Radiance
+{
+    background-position: 0 0, 50% 40%;
+    background-image: linear-gradient(var(--hz-projects-background-trans-container), var(--hz-projects-background-trans-container)), url("https://hzfishy.fr/data/img/RadianceBackground2.jpg");
+}
+
 .project-container#StructureCCloner
 {
     background-position: 0 0, 50% 40%;
