@@ -662,6 +662,7 @@ img, svg
     left: -50%;
     border-width: 2px;
     border-style: solid;
+    cursor: pointer;
 }
 
 
