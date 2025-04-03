@@ -170,6 +170,16 @@ img, svg
     animation-name: anim-intro-fade-header-background;
     animation-delay: 0s;
     animation-fill-mode: forwards;
+
+    display: block;
+    background-position: 0 0, 50%;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+    padding-bottom: 0;
+    height: 1000px;
+    width: 100%;
+    position: absolute;
+    top: 0;
 }
 
 @keyframes anim-intro-fade-header-background
@@ -567,19 +577,6 @@ img, svg
 {
     visibility: hidden;
     opacity: 0;
-}
-
-#top-header-background
-{
-    display: block;
-    background-position: 0 0, 50%;
-    background-repeat: repeat, no-repeat;
-    background-size: auto, cover;
-    padding-bottom: 0;
-    height: 1000px;
-    width: 100%;
-    position: absolute;
-    top: 0;
 }
 
 #Welcome
