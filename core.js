@@ -13,7 +13,7 @@ function EndFile()
             $('#header').html(data);
             
             var parts = window.location.href.split('/');
-            var lastSegment = parts.pop() || parts.pop();
+            var lastSegment = parts[4];
             //console.log(lastSegment);
 
             // wait for DOM be loaded
