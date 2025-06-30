@@ -54,7 +54,7 @@
 
 html
 {
-//height: 100%;
+    //height: 100%;
 }
 
 body
@@ -150,7 +150,6 @@ img, svg
     animation-name: anim-intro-fade;
     animation-delay: 0s;
     animation-fill-mode: forwards;
-    height: 100%;
 }
 
 @keyframes anim-intro-fade
@@ -1695,7 +1694,7 @@ img, svg
     background-image: linear-gradient(
             var(--hz-projects-background-trans-container-soft),
             var(--hz-projects-background-trans-container-soft)),
-            url("http://localhost:63342/PortfolioV2/data/img/ProjectsBackground_High.png");
+            url("https://hzFishy.fr/data/img/ProjectsBackground_High.png");
     border: 1px solid rgba(135, 135, 135, .5);
     box-shadow: 0 0 18px rgba(0, 0, 0, .2);
     border-radius: 15px;
