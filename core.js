@@ -14,7 +14,7 @@ function EndFile()
             
             var parts = window.location.href.split('/');
             var lastSegment = parts[3];
-            console.log(lastSegment);
+            //console.log(lastSegment);
 
             // wait for DOM be loaded
             setTimeout(function ()
