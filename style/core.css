@@ -1642,6 +1642,12 @@ img, svg
     padding-bottom: 10px;
 }
 
+.project-container-content-more-list.noline
+{
+    margin-top: 0;
+    border-top-width: 0;
+}
+
 
 .project-span
 {
