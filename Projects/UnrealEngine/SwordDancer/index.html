@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
+    <link href="/style/core.css" rel="stylesheet">
+    <script src="/core.js"></script>
+    
+    <meta content="hzFishy.fr" property="og:title" />
+    <meta content="About, skills, projects and more." property="og:description" />
+    <meta content="https://hzfishy.fr" property="og:url" />
+    <meta content="https://hzfishy.fr/data/img/Logo4000_low.jpg" property="og:image" />
+    <meta content="#73a39b" data-react-helmet="true" name="theme-color" />
+    
+    <title>hzFishy - Sword Dancer Project</title>
+</head>
+<body>
+    <div id="top-header-background" style="background-image: linear-gradient(#00000091, #222), url('https://hzfishy.fr/data/img/SwordDancerBackground2.png')">    </div>
+    <div id="header"></div>
+    
+    <div id="main-container">
+        <div class="center-screen">
+            <div class="text-single-container-blur">
+                <div class="text-single-container project-single-page-body">
+                    <h1>Sword Dancer*</h1>
+                    <p><b>Group school project | Nov - Jan 2025</b> (~2m)</p>
+                    <h2>Key Points</h2>
+                    <div class="project-container-content-title-keypoints">
+                        <div class="project-container-content-title-keypoints-inner">
+                            <p>- Combat game heavily focused on the choreography between an humanoid and a sword.</p>
+                            <p>- Heavy movement based system using State Trees.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project-single-page-body-container">
+            <h1>About</h1>
+            <p>
+               In this project we were 3 people and we were all game designers.
+               <br>
+               One of them focused more on the documentation, another on the animations and I focused on the development.
+            </p>
+            <br>
+            <p>
+                The player has a movement set, some of them can be enhanced or unlocked when using their sword.
+                Because of the possibilities of these moves (conditions, transitions, combos, context, ...) 
+                I had to plan a robust system where planned moves could be defined in Blueprints and 
+                future movements and tweaks/patchs could be implemented without slow iterations.
+            </p>
+            <br>
+            <h1>Tech solution for modular movements</h1>
+            <p>
+                The solution that rolled out quite well for us was a mix of State Trees, Blueprint definitions and fragments.
+                <br>
+                <b>State Trees</b> were used as the authority for managing the states of the Player and the Sword (one for each).
+                This comes really handy to control transitions between states, especially when you have runtime conditions that needs to be executed.
+                <br>
+                <b>Blueprints</b> definitions were used to define a Player/Sword movement (one BP per move).
+                Those Blueprint are then referenced in the State Tree to be instantiated at runtime.
+                <br>
+                And finally in these Blueprints <b>fragments</b> were used to allow modular moves. Which is great for iterating and avoid hardcoded situations.
+            </p>
+            <br>
+            <div class="img-container">
+                <p>Player State Tree</p>
+                <img class="default" src="../../../data/img/DevScreen/SwordDancer_DevScreen_PlayerStateTree.png">
+            </div>
+            <br>
+            <div class="img-container">
+                <p>Sword State Tree</p>
+                <img class="default" src="../../../data/img/DevScreen/SwordDancer_DevScreen_SwordStateTree.png">
+            </div>
+            <br>
+            <p>
+                It may be at first annoying to have to work with a dozens of Blueprints to have a few moves, but it was mandatory for fast iterations with source control.
+                <br>
+                If the moves and the parameters were on the State Tree tasks, anytime someone wanted to work on a move, no one could work as the whole State Tree asset would of been checked out.
+                <br>
+                With multiple Blueprints, each designer can work on a set of moves without bothering others.
+            </p>
+            <br>
+            <h1>Player Movements</h1>
+            <p>
+                For the player movements, fragments are the main source of behaviors.
+                <br>
+                A few example of fragments are:
+                <br>
+                - Editing the player speed
+                <br>
+                - Changing camera properties
+                <br>
+                - Sending a State Tree event to the sword State Tree
+                <br>
+                - Playing anim montages
+                <br>
+                - Running external Blueprints called "Scripts", mainly used for more game feel effects like camera shakes or flow logic like switching to another player move/state
+                <br>
+                - Changing gravity, locking moving direction and more
+            </p>
+            <div class ="img-container-vert">
+                <div class="img-container">
+                    <p>Player Dash Movement</p>
+                    <img class="default" src="../../../data/img/DevScreen/SwordDance_DevScreen_ExamplePlayerMove1.png">
+                </div>
+                <div class="img-container">
+                    <p>Player Dash External Script Movement</p>
+                    <img class="default" src="../../../data/img/DevScreen/SwordDance_DevScreen_ExamplePlayerMoveScript1.png">
+                </div>
+            </div>
+            <br>
+            <h1>Sword Movements</h1>
+            <p>
+                The sword moves using physics. For custom contextual actions such as the sword dash we use sequencers.
+                <br>
+                Sword movements have similarities with the player movement system, but they are quite different.
+                <br>
+                First off, the Sword Movement Component can run 2 types of sword movements at the same time: a Movement Behavior and a Rotation Behavior.
+                Sometimes a sword move will have both needed and in rare cases only one of them will be running.
+                <br>
+                These sword movements Blueprints are based on a mix of fragments and subclasses.
+                
+                <br>
+                - example of subclasses
+                - player event container
+                - transitions
+                - sequencer events
+                - hand by hand between sword and player for special moves
+            </p>
+            <br>
+            <p> === WIP ===</p>
+        </div>
+        
+    </div>
+    
+    <div id="footer"></div>
+    
+    <script>
+        EndFile();
+    </script>
+    </body>
+</html>

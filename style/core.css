@@ -150,6 +150,12 @@ img, svg
     animation-name: anim-intro-fade;
     animation-delay: 0s;
     animation-fill-mode: forwards;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 @keyframes anim-intro-fade
@@ -1248,6 +1254,12 @@ img, svg
     background-image: linear-gradient(var(--hz-projects-background-trans-container-soft), var(--hz-projects-background-trans-container-soft)), url("https://hzfishy.fr/data/img/UnrealPrefabsBackground1.png");
 }
 
+.project-container#SwordDancer
+{
+    background-position: 0 0, 50% 80%;
+    background-image: linear-gradient(var(--hz-projects-background-trans-container-soft), var(--hz-projects-background-trans-container-soft)), url("https://hzfishy.fr/data/img/SwordDancerBackground1.png");
+}
+
 .project-container#BrutalPuzzle
 {
     background-position: 0 0, 50% 80%;
@@ -1736,8 +1748,42 @@ img, svg
     padding: 20px;
     border-radius: 15px;
     filter: drop-shadow(0px 0px 4px #222);
-
+    max-width: 1200px;
+    
     background-color: #222;
+    text-align: left;
+}
+
+.project-single-page-body-container .img-container
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.project-single-page-body-container .img-container-vert
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.project-single-page-body-container img.default
+{
+    max-height: 350px;
+    max-width: 100%;
+    border-radius: 5px;
+    border-color: white;
+    border-style: solid;
 }
 
 .text-single-container.project-single-page-body
