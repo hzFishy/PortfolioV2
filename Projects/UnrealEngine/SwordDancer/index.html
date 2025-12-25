@@ -45,7 +45,7 @@
         <div class="project-single-page-body-container">
             <h1>About</h1>
             <p>
-               In this project we were 3 people and we were all game designers.
+               In this project we were 3 people and we were all game designers. It was a school project @ Isart Digital Paris done in third year. 
                <br>
                One of them focused more on the documentation, another on the animations and I focused on the development.
             </p>
@@ -90,7 +90,8 @@
             <br>
             <h1>Player Movements</h1>
             <p>
-                For the player movements, fragments are the main source of behaviors.
+                For the player movements, fragments are the main source of behaviors. Some of them work in standalone while other can be queried/query other fragments to get extra data (for example the Anim Montage fragment can query the Duration fragment to dynamically change the play rate to fit).
+                <br>
                 <br>
                 A few example of fragments are:
                 <br>
@@ -123,20 +124,116 @@
                 <br>
                 Sword movements have similarities with the player movement system, but they are quite different.
                 <br>
+                <br>
                 First off, the Sword Movement Component can run 2 types of sword movements at the same time: a Movement Behavior and a Rotation Behavior.
                 Sometimes a sword move will have both needed and in rare cases only one of them will be running.
                 <br>
-                These sword movements Blueprints are based on a mix of fragments and subclasses.
-                
+                These sword behavior Blueprints are based on a mix of fragments and subclasses.
                 <br>
-                - example of subclasses
-                - player event container
-                - transitions
-                - sequencer events
-                - hand by hand between sword and player for special moves
+                <br>
+                The Movement and Rotation behaviors classes have a few subclasses.
+                <br>
+                For example, the movement behavior base class contains data such as the move speed, and subclasses add extra rules, for example what sequencer to play, whats the target.
+                The rotation behavior is quite similar, it handles rotation speed and target look direction.
+                <br>
+                In our system sequencers are played from the movement behavior since I decided they will have authority on the rotation behavior in those cases.
+                <br>
+                <br>
+            </p>
+            <div style="text-align:center">
+                <p><b>Examples of sword behaviors.</b></p>
+            </div>
+            <br>
+            <div class="img-container-vert">
+                <div class="img-container">
+                    <p>Sword Follow Player Movement Behavior</p>
+                    <img class="default" src="../../../data/img/DevScreen/SwordDancer_DevScreen_SwordFollowMove.png">
+                </div>
+                <div class="img-container">
+                    <p>Sword Follow Player Rotation Behavior</p>
+                    <img class="default" src="../../../data/img/DevScreen/SwordDancer_DevScreen_SwordFollowRot.png">
+                </div>
+                <div class="img-container">
+                    <p>Sword Slash Enhanced Movement Behavior</p>
+                    <img class="default" src="../../../data/img/DevScreen/SwordDancer_DevScreen_SwordSlashSeq.png">
+                </div>
+            </div>
+            <br>
+            <p>
+                Sword behaviors also have 2 more important sections the "Transition" and "Player Event Container". These are usually used for the movement behaviors.
+                <br>
+                The Transition section is for moves that require de sword to do something before running the behavior, for example teleportation to match the move start location for the upcoming sequencer.
+                <br>
+                The Player Event Container is for behaviors that needs to send an special event to the player. For example an anim montage to run. 
             </p>
             <br>
-            <p> === WIP ===</p>
+            <div>
+                <div class="img-container">
+                    <p>Sword Ground Dash Movement Behavior (Transition section)</p>
+                    <img class="default" src="../../../data/img/DevScreen/SwordDancer_DevScreen_SwordDashTransition.png" style="height:100px">
+                </div>
+            <br>
+                <div class="img-container">
+                    <p>Sword Slash Movement Behavior (Player Event Container)</p>
+                    <img class="default" src="../../../data/img/DevScreen/SwordDancer_DevScreen_SwordSlash.png">
+                </div>
+            <br>
+                <div class="img-container">
+                    <p>Sword Recall Movement Behavior (Both used)</p>
+                    <img class="default" src="../../../data/img/DevScreen/SwordDancer_DevScreen_SwordRecall.png">
+                </div>
+            </div>
+            <br>
+            <h1>Sequencer</h1>
+            <p>
+                As previously mentioned we use level sequencers (unlike the name the level sequencers we used are abstract and can be used in any level).
+                <br>
+                These sequencers uses dynamic bindings to get the player character and sword to override their animations, transforms and so on to have perfectly synced moves with high precision.
+                <br>
+                <br>
+                To allow more customization and feedback, sequences can have events on the tracks, which can edit gameplay.
+                For example, some moves executes other ones at the end with dynamic branching.
+                Others disable move input temporarily or apply a player boost.
+            </p>
+            <br>
+            <div class="img-container">
+                <p>Sword Enhanced Slash Sequencer</p>
+                <img class="default" src="../../../data/img/DevScreen/SwordDancer_DevScreen_SlashSequencer.png">
+            </div>
+            <br>
+            <h1>Debugging</h1>
+            <p>
+                Being able to debug a complexe system like this one is mandatory.
+                <br>
+                For the states, this is handled by the very nice State Tree debugger.
+                <br>
+                For the player movements and sword behaviors I created a handfull of console commands. If I had more time I would of integrated the system inside the rewind debugger for an event better experience.
+            </p>
+            <br>
+            <div class="img-container-vert">
+                <div class="img-container">
+                    <p>Console Commands</p>
+                    <img class="default" src="../../../data/img/DevScreen/SwordDancer_DevScreen_Console.png">
+                </div>
+                <div class="img-container">
+                    <p>Player and Sword debugging</p>
+                    <img class="default" src="../../../data/img/DevScreen/SwordDancer_DevScreen_DebugTexts.png">
+                </div>
+            </div>
+            <br>
+            <br>
+                - gif of gameplay
+            <br>
+            <br>
+            <p>
+                To conclude I will say that this project was a very interesting one to work on. 
+                <br>
+                The technical challenges were intersting and if I had to work again on a project like this I would keep 
+                the same tech solution, while changing the parts that weren't the best choices but had to be kept to be able to release a build.
+            </p>
+            <br>
+            <br>
+            <p>Thanks for reading.</p>
         </div>
         
     </div>
