@@ -1786,6 +1786,11 @@ img, svg
     border-style: solid;
 }
 
+.project-single-page-body-container p
+{
+    line-height: 1.8;
+}
+
 .text-single-container.project-single-page-body
 {
     
@@ -1800,4 +1805,25 @@ img, svg
 .text-single-container.project-single-page-body h2
 {
     margin-top: 20px;
+}
+
+#img-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#img-overlay img {
+    max-width: 95vw;
+    max-height: 95vh;
+    object-fit: contain;
+    cursor: pointer;
+
+    border-radius: 5px;
+    border-color: white;
+    border-style: solid;
 }

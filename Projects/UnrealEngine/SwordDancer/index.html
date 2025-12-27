@@ -25,6 +25,10 @@
     <div id="top-header-background" style="background-image: linear-gradient(#00000091, #222), url('https://hzfishy.fr/data/img/SwordDancerBackground2.png')">    </div>
     <div id="header"></div>
     
+    <div id="img-overlay">
+        <img id="overlay-img" src="" alt="">
+    </div>
+    
     <div id="main-container">
         <div class="center-screen">
             <div class="text-single-container-blur">
@@ -34,8 +38,13 @@
                     <h2>Key Points</h2>
                     <div class="project-container-content-title-keypoints">
                         <div class="project-container-content-title-keypoints-inner">
-                            <p>- Combat game heavily focused on the choreography between an humanoid and a sword.</p>
-                            <p>- Heavy movement based system using State Trees.</p>
+                            <p>> Team size: 3 | Unreal Engine 5.6 | C++ & Blueprints</p>
+                            <br>
+                            <p>> Sword Dancer is a combat game heavily focused on the choreography between an humanoid and a sword.</p>
+                            <br>
+                            <p>> My responsibilities:</p>
+                            <p>&nbsp&nbsp&nbsp- C++ & Blueprint programmer, responsible for the architecture of the project.</p>
+                            <p>&nbsp&nbsp&nbsp- Plan, discuss and develop systems and features required following our Game Design documentation.</p>
                         </div>
                     </div>
                 </div>
@@ -45,7 +54,7 @@
         <div class="project-single-page-body-container">
             <h1>About</h1>
             <p>
-               In this project we were 3 people and we were all game designers. It was a school project @ Isart Digital Paris done in third year. 
+               In this project we were 3 people and we were all game designers. It was a school project @ Isart Digital Paris done in the third year. 
                <br>
                One of them focused more on the documentation, another on the animations and I focused on the development.
             </p>
@@ -54,21 +63,25 @@
                 The player has a movement set, some of them can be enhanced or unlocked when using their sword.
                 Because of the possibilities of these moves (conditions, transitions, combos, context, ...) 
                 I had to plan a robust system where planned moves could be defined in Blueprints and 
-                future movements and tweaks/patchs could be implemented without slow iterations.
+                future movements and tweaks/patches could be implemented without slow iterations.
             </p>
             <br>
             <h1>Tech solution for modular movements</h1>
             <p>
                 The solution that rolled out quite well for us was a mix of State Trees, Blueprint definitions and fragments.
                 <br>
+                <br>
                 <b>State Trees</b> were used as the authority for managing the states of the Player and the Sword (one for each).
-                This comes really handy to control transitions between states, especially when you have runtime conditions that needs to be executed.
+                This comes really handy to control transitions between states, especially when you have runtime conditions that need to be executed.
+                <br>
                 <br>
                 <b>Blueprints</b> definitions were used to define a Player/Sword movement (one BP per move).
                 Those Blueprint are then referenced in the State Tree to be instantiated at runtime.
                 <br>
-                And finally in these Blueprints <b>fragments</b> were used to allow modular moves. Which is great for iterating and avoid hardcoded situations.
+                <br>
+                And finally, in these Blueprints <b>fragments</b> were used to allow modular moves. Which is great for iterating and avoiding hardcoded situations.
             </p>
+            <br>
             <br>
             <div class="img-container">
                 <p>Player State Tree</p>
@@ -81,19 +94,19 @@
             </div>
             <br>
             <p>
-                It may be at first annoying to have to work with a dozens of Blueprints to have a few moves, but it was mandatory for fast iterations with source control.
+                It may be at first annoying to have to work with dozens of Blueprints to have a few moves, but it was mandatory for fast iterations with source control.
                 <br>
-                If the moves and the parameters were on the State Tree tasks, anytime someone wanted to work on a move, no one could work as the whole State Tree asset would of been checked out.
+                If the moves and the parameters were on the State Tree tasks, anytime someone wanted to work on a move, no one could work as the whole State Tree asset would have been checked out.
                 <br>
                 With multiple Blueprints, each designer can work on a set of moves without bothering others.
             </p>
             <br>
             <h1>Player Movements</h1>
             <p>
-                For the player movements, fragments are the main source of behaviors. Some of them work in standalone while other can be queried/query other fragments to get extra data (for example the Anim Montage fragment can query the Duration fragment to dynamically change the play rate to fit).
+                For the player movements, fragments are the main source of behaviors. Some of them work in standalone while others can be queried/query other fragments to get extra data (for example the Anim Montage fragment can query the Duration fragment to dynamically change the play rate to fit).
                 <br>
                 <br>
-                A few example of fragments are:
+                A few examples of fragments are:
                 <br>
                 - Editing the player speed
                 <br>
@@ -107,6 +120,7 @@
                 <br>
                 - Changing gravity, locking moving direction and more
             </p>
+            <br>
             <div class ="img-container-vert">
                 <div class="img-container">
                     <p>Player Dash Movement</p>
@@ -133,7 +147,7 @@
                 <br>
                 The Movement and Rotation behaviors classes have a few subclasses.
                 <br>
-                For example, the movement behavior base class contains data such as the move speed, and subclasses add extra rules, for example what sequencer to play, whats the target.
+                For example, the movement behavior base class contains data such as the move speed, and subclasses add extra rules, for example what sequencer to play or what is the target location.
                 The rotation behavior is quite similar, it handles rotation speed and target look direction.
                 <br>
                 In our system sequencers are played from the movement behavior since I decided they will have authority on the rotation behavior in those cases.
@@ -160,11 +174,11 @@
             </div>
             <br>
             <p>
-                Sword behaviors also have 2 more important sections the "Transition" and "Player Event Container". These are usually used for the movement behaviors.
+                Sword behaviors also have 2 more important sections: the "Transition" and "Player Event Container". These are usually used for the movement behaviors.
                 <br>
-                The Transition section is for moves that require de sword to do something before running the behavior, for example teleportation to match the move start location for the upcoming sequencer.
+                The Transition section is for moves that require the sword to do something before running the behavior, for example teleportation to match the move start location for the upcoming sequencer.
                 <br>
-                The Player Event Container is for behaviors that needs to send an special event to the player. For example an anim montage to run. 
+                The Player Event Container is for behaviors that need to send a special event to the player. For example an anim montage to run. 
             </p>
             <br>
             <div>
@@ -188,11 +202,11 @@
             <p>
                 As previously mentioned we use level sequencers (unlike the name the level sequencers we used are abstract and can be used in any level).
                 <br>
-                These sequencers uses dynamic bindings to get the player character and sword to override their animations, transforms and so on to have perfectly synced moves with high precision.
+                These sequencers use dynamic bindings to get the player character and sword to override their animations, transforms and so on to have perfectly synced moves with high precision.
                 <br>
                 <br>
                 To allow more customization and feedback, sequences can have events on the tracks, which can edit gameplay.
-                For example, some moves executes other ones at the end with dynamic branching.
+                For example, some moves execute other ones at the end with dynamic branching.
                 Others disable move input temporarily or apply a player boost.
             </p>
             <br>
@@ -203,11 +217,11 @@
             <br>
             <h1>Debugging</h1>
             <p>
-                Being able to debug a complexe system like this one is mandatory.
+                Being able to debug a complex system like this one is mandatory.
                 <br>
                 For the states, this is handled by the very nice State Tree debugger.
                 <br>
-                For the player movements and sword behaviors I created a handfull of console commands. If I had more time I would of integrated the system inside the rewind debugger for an event better experience.
+                For the player movements and sword behaviors I created a handful of console commands. If I had more time I would have integrated the system inside the rewind debugger for an even better experience.
             </p>
             <br>
             <div class="img-container-vert">
@@ -222,14 +236,11 @@
             </div>
             <br>
             <br>
-                - gif of gameplay
-            <br>
-            <br>
             <p>
-                To conclude I will say that this project was a very interesting one to work on. 
+                To conclude, I will say that this project was a very interesting one to work on. 
                 <br>
                 The technical challenges were intersting and if I had to work again on a project like this I would keep 
-                the same tech solution, while changing the parts that weren't the best choices but had to be kept to be able to release a build.
+                the same tech solution while changing the parts that weren't the best choices but had to be kept to be able to release a build.
             </p>
             <br>
             <br>
