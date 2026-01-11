@@ -1245,6 +1245,12 @@ img, svg
 .project-container#PushThemAll
 {
     background-position: 0 0, 50% 80%;
+    background-image: linear-gradient(var(--hz-projects-background-trans-container-soft), var(--hz-projects-background-trans-container-soft)), url("https://hzfishy.fr/data/img/FlyingMassBackground1.png");
+}
+
+.project-container#FlyingMass
+{
+    background-position: 0 0, 50% 80%;
     background-image: linear-gradient(var(--hz-projects-background-trans-container-soft), var(--hz-projects-background-trans-container-soft)), url("https://hzfishy.fr/data/img/UEPushThemAllBackground2.png");
 }
 
@@ -1764,6 +1770,11 @@ img, svg
     align-items: center;
 
     text-align: center;
+}
+
+.project-single-page-body-container .img-container img
+{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .project-single-page-body-container .img-container-vert
