@@ -1242,6 +1242,12 @@ img, svg
     color: white;
 }
 
+.project-container#PointGraphPathfinding
+{
+    background-position: 0 0, 50% 80%;
+    background-image: linear-gradient(var(--hz-projects-background-trans-container-soft), var(--hz-projects-background-trans-container-soft)), url("https://hzfishy.fr/data/img/PointGraphPathfindingBackground1.png");
+}
+
 .project-container#FlyingMass
 {
     background-position: 0 0, 50% 80%;
