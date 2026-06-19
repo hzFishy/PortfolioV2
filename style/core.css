@@ -474,7 +474,7 @@ img, svg
 .text-single-container-blur
 {
     position: relative;
-    background-color: var(--hz-gray-low);
+    background-color: var(--hz-black-mid);
     border: 1px solid rgba(135, 135, 135, .5);
     box-shadow: 0 0 18px rgba(0, 0, 0, .2);
     border-radius: 15px;
@@ -1449,6 +1449,9 @@ img, svg
 }
 .project-container-content-title-keypoints-inner
 {
+    margin-left: 15px;
+    margin-right: 15px;
+    
     text-align: left;
 
     @media (width > 1300px)

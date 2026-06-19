@@ -51,15 +51,58 @@
                 </div>
             </div>
         </div>
+
+        <br>
+        <br>
+        <br>
         
         <div class="project-single-page-body-container">
             <h1>About</h1>
             <p>
-               In this project we were 6 Game Designers, 4 Game Designers & Programmers, 9 Game Artists, 3 Game Programmers and 2 Sound Designers.
+                This project was a group project at Isart Digital (Paris), we had many constraints such as making a short adventure game in Italy with a top down camera. 
+                We worked with Unreal Engine 5.6 and used Perforce as our Version Control System.
+                In this project we were 6 Game Designers, 4 Game Designers & Programmers, 9 Game Artists, 3 Game Programmers and 2 Sound Designers.
             </p>
-            
-            WIP
-            
+            <br>
+            <h1>Level Design, World Building and optimizations</h1>
+            <p>
+                As a tech GD I was responsible for the organization of the game level. My tasks were mainly authoring and verifying regularly that actors were placed in the correct folders and sublevels.
+                <br>
+                <br>
+                <div class="img-container-vert">
+                    <div class="img-container">
+                        <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_Top1.jpeg">
+                    </div>
+                    <div class="img-container">
+                        <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_Top2.jpeg">
+                    </div>
+                    <div class="img-container">
+                        <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_Side1.jpeg">
+                    </div>
+                    <div class="img-container">
+                        <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_Side2.jpg">
+                    </div>
+                </div>
+                <br>
+                <br>
+                For a clearer vision and obviously optimization reasons we decided to use sublevels in our game level to only load relevant parts of the level depending on the camera of the player.
+                Since sublevels were added mid-production, we decied to keep important and core actors such as floors, checkpoints, nav bounds volumes and combat related actors (spawn points, arenas, ...) always loaded on the persistent level. This isn't ideal for a big project but was fine in our case since this would avoid extra costs for the developers while keeping our frame budget.
+                <br>
+                <div class="img-container">
+                    <p>Player State Tree</p>
+                    <img class="default" src="../../../data/img/DevScreen/SwordDancer_DevScreen_PlayerStateTree.png">
+                </div>
+                <br>
+                Our nav mesh was static with dynamic modifier areas to avoid unnecessary nav recalculations with level streaming, we also tweaked the level streaming actor and component registration settings to time slice as much as we could those process for stable fps.
+                <br>
+                <br>
+                We also did a lot of work to optimize the physics scene, such as enabling async physic body creation, using simple collisions if necessary or completely disabling collisions for purely visual actors.
+                Instead of having complex collisions being used we instead used invisible walls (boxes) and spheres (capsules) for the actual gameplay collisions.
+                <br>
+                <br>
+                We coupled level streaming with OFPA (One File Per Actor, also known as External Actors) to speed up drastically level design and world building in our team, since with this feature multiple users can work on a same level (or sublevel).
+            </p>
+            <br>
             <br>
             <p>Thanks for reading.</p>
         </div>
