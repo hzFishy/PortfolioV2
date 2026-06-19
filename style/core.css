@@ -497,7 +497,7 @@ img, svg
 .text-single-container-blur:hover
 {
     transform: translateY(-5px);
-    background-color: rgba(135, 135, 135, .40);
+    background-color: rgb(96 95 95 / 0.4);
 }
 
 #name

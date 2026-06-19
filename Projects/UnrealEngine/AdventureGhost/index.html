@@ -37,7 +37,7 @@
                     <p><b>Group school project | May - June 2026</b> (~2m)</p>
                     
                     <br>
-                    <img src="../../../data/img/AdventureGhost_Cover1.jpeg">
+                    <img src="../../../data/img/AdventureGhost_Cover1.jpeg" style="width:300px">
                     <br>
                     
                     <h2>Key Points</h2>
@@ -49,8 +49,8 @@
                             <br>
                             <p>> My responsibilities:</p>
                             <p>&nbsp&nbsp&nbsp- Core game design</p>
-                            <p>&nbsp&nbsp&nbsp- Level design.</p>
-                            <p>&nbsp&nbsp&nbsp- Level organisation and optimization.</p>
+                            <p>&nbsp&nbsp&nbsp- Level design</p>
+                            <p>&nbsp&nbsp&nbsp- Level organisation and optimization</p>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                 In this project we were 6 Game Designers, 4 Game Designers & Programmers, 9 Game Artists, 3 Game Programmers and 2 Sound Designers.
             </p>
             <br>
-            <h1>Level Design, World Building and optimizations</h1>
+            <h1>Level Design, World Building and Optimization</h1>
             <p>
                 As a tech GD I was responsible for the organization of the game level. My tasks were mainly authoring and verifying regularly that the actors were placed in the correct folders and sublevels.
             </p>
@@ -99,14 +99,17 @@
                 This isn't ideal for a big project but was fine in our case since this would avoid extra costs for the developers while keeping our frame budget.
                 <br>
                 <br>
+                We also coupled level streaming with OFPA (One File Per Actor, also known as External Actors) to speed up drastically level design and world building in our team, since with this feature multiple users can work on a same level (or sublevel).
+                <br>
                 Our nav mesh was static with dynamic modifier areas to avoid unnecessary nav recalculations with level streaming, we also tweaked the level streaming actor and component registration settings to time slice as much as we could those process for stable fps.
                 <br>
                 <br>
                 We also did a lot of work to optimize the physics scene, such as enabling async physic body creation, using simple collisions if necessary or completely disabling collisions for purely visual actors.
                 Instead of having complex collisions being used we instead used invisible walls (boxes) and spheres (capsules) for the actual gameplay collisions.
                 <br>
-                <br>
                 Aside the performances gain this also made the artists work easier since they didn't had to take into account gameplay collisions while dressing up the level.
+                <br>
+                The collision optimizations were also handled by the game programmers, which also done other optimizations such as reducing the triangles count and texture sizes.
             </p>
             <br>
             <br>
@@ -145,11 +148,6 @@
                 <p>High level view of all the invisible walls and capsules of the level.</p>
                 <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_InvisWalls1.jpg">
             </div>
-            <br>
-            <br>
-            <p>
-                We coupled level streaming with OFPA (One File Per Actor, also known as External Actors) to speed up drastically level design and world building in our team, since with this feature multiple users can work on a same level (or sublevel).
-            </p>
             <br>
             <br>
             <p>
