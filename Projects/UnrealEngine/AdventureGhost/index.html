@@ -66,32 +66,33 @@
             <br>
             <h1>Level Design, World Building and optimizations</h1>
             <p>
-                As a tech GD I was responsible for the organization of the game level. My tasks were mainly authoring and verifying regularly that actors were placed in the correct folders and sublevels.
-                <br>
-                <br>
-                <div class="img-container-vert">
-                    <div class="img-container">
-                        <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_Top1.jpeg">
-                    </div>
-                    <div class="img-container">
-                        <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_Top2.jpeg">
-                    </div>
-                    <div class="img-container">
-                        <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_Side1.jpeg">
-                    </div>
-                    <div class="img-container">
-                        <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_Side2.jpg">
-                    </div>
-                </div>
-                <br>
-                <br>
-                For a clearer vision and obviously optimization reasons we decided to use sublevels in our game level to only load relevant parts of the level depending on the camera of the player.
-                Since sublevels were added mid-production, we decied to keep important and core actors such as floors, checkpoints, nav bounds volumes and combat related actors (spawn points, arenas, ...) always loaded on the persistent level. This isn't ideal for a big project but was fine in our case since this would avoid extra costs for the developers while keeping our frame budget.
-                <br>
+                As a tech GD I was responsible for the organization of the game level. My tasks were mainly authoring and verifying regularly that the actors were placed in the correct folders and sublevels.
+            </p>
+            <br>
+            <br>
+            <p style="text-align: center">Various angles of our final level with day lighting</p>
+            <div class="img-container-vert">
                 <div class="img-container">
-                    <p>Player State Tree</p>
-                    <img class="default" src="../../../data/img/DevScreen/SwordDancer_DevScreen_PlayerStateTree.png">
+                    <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_Top1.jpeg">
                 </div>
+                <div class="img-container">
+                    <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_Top2.jpeg">
+                </div>
+                <div class="img-container">
+                    <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_Side1.jpeg">
+                </div>
+                <div class="img-container">
+                    <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_Side2.jpg">
+                </div>
+            </div>
+            <br>
+            <br>
+            <p>
+                For a clearer vision and obviously optimization reasons we decided to use sublevels in our game level to only load relevant parts of the level depending on the camera of the player.
+                Since sublevels were added mid-production, we decided to keep important and core actors such as floors, checkpoints, nav bounds volumes and combat related actors (spawn points, arenas, ...) always loaded on the persistent level. 
+                <br>
+                This isn't ideal for a big project but was fine in our case since this would avoid extra costs for the developers while keeping our frame budget.
+                <br>
                 <br>
                 Our nav mesh was static with dynamic modifier areas to avoid unnecessary nav recalculations with level streaming, we also tweaked the level streaming actor and component registration settings to time slice as much as we could those process for stable fps.
                 <br>
@@ -100,8 +101,58 @@
                 Instead of having complex collisions being used we instead used invisible walls (boxes) and spheres (capsules) for the actual gameplay collisions.
                 <br>
                 <br>
+                Aside the performances gain this also made the artists work easier since they didn't had to take into account gameplay collisions while dressing up the level.
+            </p>
+            <br>
+            <br>
+            <div class="img-container">
+                <p>Example A: Game View</p>
+                <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_CollisionsA1.jpg">
+            </div>
+            <br>
+            <div class="img-container">
+                <p>Example A: Game View with collisions</p>
+                <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_CollisionsA2.jpg">
+            </div>
+            <br>    
+            <div class="img-container">
+                <p>Example A: Editor View</p>
+                <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_CollisionsA3.jpg">
+            </div>
+            <br>
+            <br>
+            <div class="img-container">
+                <p>Example B: Game View</p>
+                <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_CollisionsB1.jpg">
+            </div>
+            <br>
+            <div class="img-container">
+                <p>Example B: Game View with collisions</p>
+                <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_CollisionsB2.jpg">
+            </div>
+            <br>
+            <div class="img-container">
+                <p>Example B: Editor View</p>
+                <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_CollisionsB3.jpg">
+            </div>
+            <br>
+            <div class="img-container">
+                <p>High level view of all the invisible walls and capsules of the level.</p>
+                <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_InvisWalls1.jpg">
+            </div>
+            <br>
+            <br>
+            <p>
                 We coupled level streaming with OFPA (One File Per Actor, also known as External Actors) to speed up drastically level design and world building in our team, since with this feature multiple users can work on a same level (or sublevel).
             </p>
+            <br>
+            <br>
+            <p>
+                As a final optimization when we were close to the end of the project, I converted all static meshes that were at a very high amount into Instanced Static Meshes to reduce the draw count.
+            </p>
+            <div class="img-container">
+                <img class="default" src="../../../data/img/DevScreen/AdventureGhost_DevScreen_ISM1.jpg">
+            </div>
             <br>
             <br>
             <p>Thanks for reading.</p>
