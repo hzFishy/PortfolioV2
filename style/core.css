@@ -1449,20 +1449,17 @@ img, svg
 }
 .project-container-content-title-keypoints-inner
 {
-    margin-left: 15px;
-    margin-right: 15px;
-    
     text-align: left;
 
     @media (width > 1300px)
     {
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 15px;
+        margin-right: 15px;
     }
     @media (width <= 800px)
     {
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: 7px;
+        margin-right: 7px;
     }
 }
 
