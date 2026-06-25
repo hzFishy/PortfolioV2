@@ -31,6 +31,7 @@
     --hz-projects-background-trans-container: rgb(0 0 0 / 70%);
     --hz-projects-background-trans-container-soft: rgb(0 0 0 / 50%);
     --hz-projects-background-trans-single: rgba(27, 27, 27, 0.7);
+    --hz-projects-background-trans-single-low: rgba(27, 27, 27, 0.3);
     
     --hz-black-bodybackground: #222;
     
@@ -1467,7 +1468,7 @@ img, svg
 {
     transition-duration: 0.5s;
     
-    background-color: var(--hz-projects-background-trans-single);
+    background-color: var(--hz-projects-background-trans-single-low);
     border-radius: 10px;
     border-color: rgba(255, 255, 255, 0.2);
     border-width: 4px;
@@ -1611,7 +1612,7 @@ img, svg
 
 .project-container-content-more
 {
-    background-color: var(--hz-projects-background-trans-single);
+    background-color: var(--hz-projects-background-trans-single-low);
     border-radius: 10px;
     border-color: rgba(255, 255, 255, 0.2);
     border-width: 4px;
@@ -1635,6 +1636,11 @@ img, svg
 .project-container-content-more:hover
 {
     border-color: var(--hz-projects-moredetailsbtn-border)
+}
+
+.no-bg-color
+{
+    background-color: transparent;
 }
 
 .project-container-content-more-title
